@@ -1,0 +1,94 @@
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: orange;
+  font-size: 16px; }
+
+.container {
+  width: 100%; }
+
+@media all and (min-width: 700px) {
+  body {
+    background-color: green; }
+
+  .container {
+    width: 96%;
+    margin: 0 auto; } }
+@media all and (min-width: 1000px) {
+  body {
+    background-color: blue; }
+
+  .container {
+    width: 1000px; } }
+header {
+  background-color: black;
+  color: white;
+  padding: 10px; }
+
+footer {
+  background-color: #375772;
+  padding: 10px; }
+
+.showcase {
+  background-color: black;
+  color: white; }
+  .showcase .primary {
+    background-color: purple;
+    min-height: 500px; }
+  .showcase .showcase-row {
+    display: block; }
+    @media (min-width: 768px) {
+      .showcase .showcase-row {
+        display: flex; } }
+  .showcase .secondary {
+    width: 100%;
+    min-height: 200px;
+    background-color: orange; }
+    @media (min-width: 768px) {
+      .showcase .secondary {
+        width: 50%; } }
+  .showcase .showcase-right {
+    width: 100%;
+    min-height: 200px;
+    background-color: yellow; }
+    .showcase .showcase-right .tertiary {
+      width: 100%;
+      min-height: 100px;
+      background-color: blue; }
+    @media (min-width: 768px) {
+      .showcase .showcase-right {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap; }
+        .showcase .showcase-right .tertiary {
+          width: 50%; } }
+
+.trending {
+  background-color: yellow;
+  padding: 1rem 0; }
+  .trending h2 {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem; }
+  .trending .trending-row .trending-item {
+    background-color: limegreen;
+    width: calc(100% - 2rem);
+    margin: 1rem; }
+  @media (min-width: 768px) {
+    .trending .trending-row {
+      display: flex;
+      flex-wrap: wrap; }
+      .trending .trending-row .trending-item {
+        width: calc((100% - 2rem)/3);
+        margin: .5rem; }
+        .trending .trending-row .trending-item:nth-child(3n+1) {
+          background-color: red;
+          margin-left: 0; }
+        .trending .trending-row .trending-item:nth-child(3n+3) {
+          background-color: aqua;
+          margin-right: 0; } }
+
+/*# sourceMappingURL=style.css.map */

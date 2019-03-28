@@ -1,0 +1,12 @@
+@import
+	'base/variables',
+	'base/mixins',
+	'base/foundation';
+
+@import
+	'regions/header',
+	'regions/sidebar',
+	'regions/footer';
+
+@import
+	'views/home';

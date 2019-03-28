@@ -1,0 +1,23 @@
+body {
+  background-color: yellow;
+  font-size: 16px; }
+
+header {
+  background-color: orange;
+  padding: 1rem; }
+
+#overlay {
+  background-color: teal;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  visibility: hidden;
+  width: 100vw;
+  height: 0;
+  transition: all 2s; }
+  #overlay.active {
+    visibility: visible;
+    height: 100vh; }
+
+/*# sourceMappingURL=style.css.map */
