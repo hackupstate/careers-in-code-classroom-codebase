@@ -1,73 +1,36 @@
 .showcase {
-	background-color: black;
+	background-color: magenta;
 	color: white;
 	.primary {
-		background-color: purple;
-		min-height: 500px;
+		position: relative;
+		margin-bottom: 1rem;
+		.article-text {
+			background-color: limegreen;
+			@include breakpoint(sm) {
+				position: absolute;
+				bottom: 1rem;
+				left: 1rem;
+			}
+		}
 	}
 	.showcase-row {
-		display: block;
 		@include breakpoint(sm) {
 			display: flex;
-		}
-	}
-	.secondary {
-		width: 100%;
-		min-height: 200px;
-		background-color: orange;
-		@include breakpoint(sm) {
-			width: 50%;
-		}
-	}
-	.showcase-right {
-		width: 100%;
-		min-height: 200px;
-		background-color: yellow;
-		.tertiary {
-			width: 100%;
-			min-height: 100px;
-			background-color: blue;
-		}
-		@include breakpoint(sm) {
-			width: 50%;
-			display: flex;
-			flex-wrap: wrap;
-			.tertiary {
+			.secondary {
 				width: 50%;
 			}
-		} // showcase right breakpoint
-	} // showcase right
-} // showcase end
-.trending {
-	background-color: yellow;
-	padding: 1rem 0;
-	h2 {
-		font-family: $primaryFont;
-		font-weight: bold;
-		font-size: 1.5rem;
-		margin-bottom: 1rem;
-	}
-	.trending-row {
-		.trending-item {
-			background-color: limegreen;
-			width: calc(100% - 2rem);
-			margin: 1rem;
-		}
-		@include breakpoint(sm) {
-			display: flex;
-			flex-wrap: wrap;
-			.trending-item {
-				width: calc((100% - 2rem)/3);
-				margin: .5rem;
-				&:nth-child(3n+1) {
-					background-color: red;
-					margin-left: 0;
-				}
-				&:nth-child(3n+3) {
-					background-color: aqua;
-					margin-right: 0;
+			.showcase-right {
+				width: 50%;
+				display: flex;
+				flex-wrap: wrap;
+				.tertiary {
+					width: calc(50% - 1rem);
+					margin-left: 1rem;
 				}
 			}
 		}
-	} // trending row
-} // trending end
+	}
+}
+.trending {
+	background-color: limegreen;
+}

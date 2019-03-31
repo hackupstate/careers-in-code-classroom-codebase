@@ -1,5 +1,20 @@
 header {
 	background-color: black;
 	color: white;
-	padding: 10px;
+	padding: 1rem;
+	.header-row {
+		display:	flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.header-icon {
+		//background-color: red;
+		width: 30px;
+		height: auto;
+		fill: white;
+	}
+	.logo {
+		width: 200px;
+		height: auto;
+	}
 }

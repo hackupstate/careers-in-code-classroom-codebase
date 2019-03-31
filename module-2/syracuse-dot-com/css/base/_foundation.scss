@@ -1,28 +1,27 @@
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, ul, li {
 	margin: 0;
 	padding: 0;
+	font: inherit;
 }
 body {
-	background-color: orange;
+	background-color: yellow;
 	font-size: 16px;
 }
 .container {
 	width: 100%;
-}
-@media all and (min-width:700px) {
-	body {
-		background-color: green;
-	}
-	.container {
+	//background-color: pink;
+	@include breakpoint(sm) {
 		width: 96%;
 		margin: 0 auto;
 	}
-}
-@media all and (min-width:1000px) {
-	body {
-		background-color: blue;
-	}
-	.container {
+	@include breakpoint(md) {
 		width: 1000px;
 	}
+	@include breakpoint(lg) {
+		width: 1200px;
+	}
+}
+.responsive-img {
+	width: 100%;
+	height: auto;
 }

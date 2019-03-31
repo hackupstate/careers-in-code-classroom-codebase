@@ -1,9 +1,3 @@
-@mixin buildFont($family, $size, $color) {
-	font-family: $family;
-	font-size: $size;
-	color: $color;
-}
-
 @mixin breakpoint($class) {
 	@if $class == xs {
 		@media (max-width: 767px) { @content; }
