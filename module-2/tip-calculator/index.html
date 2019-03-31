@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Tip calculator</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<h1>Tip Calculator</h1>
+	</header>
+	<main>
+		<form action="" id="calculator">
+			<div class="input-group">
+				<label for="bill">How much was your bill?</label>
+				<div class="input-row">
+					<span class="prefix">$</span>
+					<input
+					type="number"
+					name="bill"
+					id="bill"
+					step=".01"
+					placeholder="0.00">
+				</div><!-- /input row end-->
+			</div><!-- /input group end-->
+			<div class="input-group">
+				<label for="tip">What percentage do you want to tip at?</label>
+				<input type="radio" name="tip" value=".10"> 10%<br />
+				<input type="radio" name="tip" value=".15" checked> 15%<br />
+				<input type="radio" name="tip" value=".20"> 20%
+				</div><!-- /input group end-->
+			</div><!-- /input group end-->
+			<div class="input-group">
+				<label for="totalTip">Total tip</label>
+				<h2>
+					<span class="prefix">$</span>
+					<span id="totalTip">5.00</span>
+				</h2>
+			</div>
+			<div class="input-group">
+				<label for="totalBill">Total bill</label>
+				<h2>
+					<span class="prefix">$</span>
+					<span id="totalBill">15.00</span>
+				</h2>
+			</div>
+		</form>
+	</main>
+	<script src="js/main.js"></script>
+</body>
+</html>

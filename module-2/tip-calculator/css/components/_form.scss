@@ -1,0 +1,46 @@
+#calculator {
+	text-align: center;
+	label {
+		display: block;
+		//background-color: limegreen;
+		font-family: $secondaryFont;
+		font-size: 1.1rem;
+		font-style: italic;
+		margin-bottom: .5rem;
+	}
+	.prefix {
+		font-family: $primaryFont;
+		font-size: 1.5rem;
+		color: $gray;
+		font-weight: bold;
+		margin-right: .5rem;
+	}
+	.input-group {
+		border-bottom: 1px solid black;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		&:last-child {
+			border: 0;
+		}
+	}
+	.input-row {
+		display: flex;
+		align-items: center;
+	}
+	input[type="number"] {
+		background-color: white;
+		padding: 1rem;
+		color: black;
+		border: 1px solid $gray;
+		width: 100%;
+		font-family: $primaryFont;
+		font-size: 1rem;
+		font-weight: bold;
+	}
+	h2 {
+		font-family: $primaryFont;
+		font-size: 1.5rem;
+		color: black;
+		font-weight: bold;
+	}
+}
