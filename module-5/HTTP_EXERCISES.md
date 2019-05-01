@@ -4,11 +4,6 @@ For each of these exercises, you will need to make a http request to a server I 
 note down each of your requests (method, path, headers, request body if applicable) and the server's
 response (status code, any headers, and any response body)
 
-A successful answer should start with `ANS`, and question that was invalid or otherwise was unable
-to be processed will start with `ERR`. If you received a response that starts with `ERR`, try your
-best to ensure that you are sending the correct data, and if you have trouble, we can go over it
-more deeply. Please note down your responses and turn them in on google classroom.
-
 The server's hostname is `TODO`
 The server is running on tcp port `80` (standard http port)
 
