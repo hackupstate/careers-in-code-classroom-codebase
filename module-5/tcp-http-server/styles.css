@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e1e1e1;
+  font-family: 'Roboto Mono', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  margin-bottom: 24px;
+  font-size: 32px;
+}
+
+p {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.container {
+  background-color: #fff;
+  padding: 24px;
+  margin: 60px auto;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 4px;
+}
