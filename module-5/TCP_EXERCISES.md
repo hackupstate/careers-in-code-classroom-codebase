@@ -11,8 +11,8 @@ to be processed will start with `ERR`. If you received a response that starts wi
 best to ensure that you are sending the correct data, and if you have trouble, we can go over it
 more deeply. Please note down your responses and turn them in on google classroom.
 
-The server's ip address is `TODO`
-The server is running on tcp port `TODO`
+The server's ip address is `module5.tk`
+The server is running on tcp port `4000`
 
 ## Questions to ask the server
 

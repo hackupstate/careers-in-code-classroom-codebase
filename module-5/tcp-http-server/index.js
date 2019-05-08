@@ -95,6 +95,9 @@ app.get('/styles.css', (req, res) => res.status(200).sendFile(path.join(__dirnam
 
 // Day 2, Day 3, Day 4
 app.get('/fruit', (req, res) => res.status(200).send('Apples, Oranges, Banannas'));
+app.get('/apples', (req, res) => res.status(200).send('Apples!'));
+app.get('/oranges', (req, res) => res.status(200).send('Oranges.'));
+app.post('/banannas', (req, res) => res.status(200).send('Banannas?'));
 app.post('/echo', (req, res) => res.status(200).send(req.body));
 function frequencies(body) {
   const words = body.toString().split(' ');
