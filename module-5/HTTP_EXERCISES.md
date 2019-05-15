@@ -5,7 +5,7 @@ note down each of your requests (method, path, headers, request body if applicab
 response (status code, any headers, and any response body)
 
 The server's hostname is `module5.tk`
-The server is running on tcp port `80` (standard http port)
+The server is running on tcp port `5000`
 
 ## Requests to make to the server
 
@@ -25,7 +25,9 @@ that was specified. Try it with my phrase, but also if you'd like try it with a 
 ```
 Method: POST
 Path: /text-processing/frequencies
-Headers: none
+Headers:
+  Header name: Content-Length
+  Header value: 44 (this is the number of characters that is being sent in the body)
 body: the quick brown fox jumped over the lazy dog
 ```
 
