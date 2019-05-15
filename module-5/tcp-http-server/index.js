@@ -125,7 +125,7 @@ app.post('/text-processing/frequencies', (req, res) => {
   res.send(Object.entries(freqs).map(([key, value]) => `${key}: ${value}`).join('\n')+'\n');
 });
 app.get('/lockbox', (req, res) => {
-  if (req.headers['Authorization'] === 'supersecret') {
+  if (req.headers['authorization'] === 'supersecret') {
     res.status(201).send('You have unlocked the box! Your instructor is impressed.');
   } else {
     res.status(401).send('You have not provides the right password to unlock the box. Try again!');
