@@ -80,6 +80,10 @@ console.log(`* Started TCP server on port ${TCP_PORT}`);
 
 // HTTP SERVER
 app.use((req, res, next) => {
+  req.setTimeout(
+    3600 * 1000, // 1 hour, students were having issues with the request timing out
+    () => res.send('Request has timed out, please try again!')
+  );
   let data = '';
   req.on('data', d => {
     data += d.toString();
@@ -89,7 +93,7 @@ app.use((req, res, next) => {
       try {
         req.body = JSON.parse(data);
       } catch (err) {
-        res.status(400).send({detail: 'The request body can not be parsed as json.'})
+        req.body = data;
       }
     }
     next();

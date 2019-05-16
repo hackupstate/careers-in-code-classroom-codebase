@@ -21,7 +21,8 @@ Headers: none
 ### Exercise 2
 
 This endpoint, when given a bunch of text in the body, will return the frequencies of each word
-that was specified. Try it with my phrase, but also if you'd like try it with a phrase of your own!
+that was specified. Try it with my phrase, but also, if you'd like, try it with a phrase of your
+own!
 ```
 Method: POST
 Path: /text-processing/frequencies
@@ -44,4 +45,17 @@ Path: /lockbox
 Headers:
   Header name: Authorization
   Header value: either the password, or something else to test the other case
+```
+
+### Exercise 4
+
+This endpoint, when given a bunch of text in the body, will return the word that has the highest
+frequency. Try it with my phrase, but also, if you'd like, try it with a phrase of your own!
+```
+Method: POST
+Path: /text-processing/most-common-word
+Headers:
+  Header name: Content-Length
+  Header value: 44 (this is the number of characters that is being sent in the body)
+body: the quick brown fox jumped over the lazy dog
 ```
