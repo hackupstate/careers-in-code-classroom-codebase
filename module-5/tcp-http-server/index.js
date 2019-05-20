@@ -80,6 +80,13 @@ console.log(`* Started TCP server on port ${TCP_PORT}`);
 
 // HTTP SERVER
 app.use((req, res, next) => {
+  res.set('Access-Control-Allow-Origin', '*');
+  res.set('Access-Control-Allow-Method', '*');
+  res.set('Access-Control-Allow-Headers', '*');
+  next();
+});
+
+app.use((req, res, next) => {
   req.setTimeout(
     3600 * 1000, // 1 hour, students were having issues with the request timing out
     () => res.send('Request has timed out, please try again!')
