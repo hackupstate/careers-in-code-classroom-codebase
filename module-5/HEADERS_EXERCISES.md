@@ -20,6 +20,6 @@ particular!
 Make a `GET` request `http://careersincode.com/`, as you normally would. Ensure that you get back
 what's expected (a bunch of HTML that looks vaugely like the careers in code site). Now, make the
 same request, only this time, include a `Host` header that is something other than
-`careersincode.com` - maybe `example.com`. What does the response from the server look like? Why do
+`hackupstate.com` - maybe `example.com`. What does the response from the server look like? Why do
 you think this looks different? If you aren't sure, scan through the host header section of the
 presentation.
