@@ -11,7 +11,7 @@ In the javascript console, convert this string into a javascript object using th
 ```
 
 #### Optional next steps
-- Add a new entry to the `popup` array, specifying a new menu item for `Save` that has the `onclick` key equal to `SaveDoc()`.
+- Add a new entry to the `popup` array inside of the JSON string, specifying a new menu item for `Save` that has the `onclick` key equal to `SaveDoc()`. After doing this, re-convert the string into a javascript object and ensure that your object has the new entry in the array.
 - Take a look into the optinal `reviver` parameter: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#Using_the_reviver_parameter
 
 
