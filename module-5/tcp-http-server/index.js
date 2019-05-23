@@ -200,6 +200,29 @@ app.get('/number-list', (req, res) => res.status(200).send({
 }));
 
 // Day 7: REST API design
+app.get('/users', (req, res) => {
+  const page = (parseInt(req.query.page, 10) || 1) - 1;
+  if (isNaN(page)) {
+    return res.status(400).send({detail: "Bad page parameter"});
+  }
+  const pageSize = req.query.size || 10;
+  const startIndex = page * pageSize;
+  const endIndex = startIndex + pageSize;
+
+  let allData = require('./users.json');
+  if (req.query.city) {
+    allData = allData.filter(d => d.city.indexOf(req.query.city) >= 0);
+  }
+
+  const pageOfData = allData.slice(startIndex, endIndex);
+  res.status(200).send({
+    total: allData.length,
+    page: page+1,
+    nextPageAvailable: (allData.length - 1) > endIndex,
+    data: pageOfData,
+  });
+});
+
 function getFile(filename) {
   try {
     const contents = fs.readFileSync(filename);
@@ -237,8 +260,14 @@ app.post('/students/:id/assignments', studentsReadByIdAssignmentsCreate);
 
 // Read
 function studentsReadList(req, res) {
+  let filtered = STUDENTS;
+
+  if (req.query.name) {
+    filtered = filtered.filter(s => (s.name || '').indexOf(req.query.name) >= 0);
+  }
+
   res.status(200);
-  res.send({results: STUDENTS});
+  res.send({results: filtered});
 }
 app.get('/students', studentsReadList);
 function studentsReadById(req, res) {
@@ -284,10 +313,11 @@ app.get('/students/:id/assignments/:aid', studentsReadByIdAssignmentsReadById);
 function studentsUpdate(req, res) {
   for (let i = 0; i < STUDENTS.length; i++) {
     if (STUDENTS[i].id === req.params.id) {
-      STUDENTS[i] = req.body;
+      STUDENTS[i] = Object.assign({}, STUDENTS[i], req.body);
 
       res.status(200);
       res.send(STUDENTS[i]);
+      saveFile(STUDENTS_FILE, STUDENTS);
       return;
     }
   }
