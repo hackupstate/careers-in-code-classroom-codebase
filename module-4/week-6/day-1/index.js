@@ -1,4 +1,5 @@
 // Change this file to do something else!
 
-const numberOfStates = 50;
-console.log(numberOfStates);
+const barbieGirl = "Hello Barbie let's go party";
+console.log(barbieGirl);
+
