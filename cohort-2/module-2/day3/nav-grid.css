@@ -1,0 +1,9 @@
+.center-links {
+	text-align: center;
+	display: flex;
+	align-content: space-around;
+}
+
+.center-links > p {
+	flex: 1;
+}
