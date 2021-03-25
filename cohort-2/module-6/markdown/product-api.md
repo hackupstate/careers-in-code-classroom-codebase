@@ -68,19 +68,19 @@ Returns an object that represents the product data
       - type: string; */
       alt: 'Some Image',
     },
-
-    /* List of strings that represent product attributes - used for filtering
-      - type: string[]; */
-    attributes: [
-      "some-attribute", "some-other-attribute"
-    ],
-
-    /* Product rating - used for sorting by "best-selling"
-      - type: number; */
-    rating: 5,
-
     ...
-  ]
+  ],
+
+  /* List of strings that represent product attributes - used for filtering
+    - type: string[]; */
+  attributes: [
+    "some-attribute", "some-other-attribute"
+  ],
+
+  /* Product rating - used for sorting by "best-selling"
+    - type: number; */
+  rating: 5,
+
 }
 ```
 
@@ -102,13 +102,13 @@ Returns an object with an items array property that represents all the products 
 
 - Query the database using the `query`, `filterBy` and `sortBy` params passed in from the user.
 - The `query` value should match against the product name
-- The `filterBy` value should be performed before `sortBy`, and should filter based whether the value exists in the products' `attributes` array.
-- The `sortBy` value represents two different types of sorts: **"best-selling"**, which sorts based on the products' `rating` property (sort highest to lowest); **"price-ascending"** and **"price-descending"**, which sort based on the products `price` property.
+- The `filterBy` value should be performed before `sortBy`, and should filter based on whether the value exists in the product's `attributes` array.
+- The `sortBy` value represents two different types of sorts: **"best-selling"**, which sorts based on the product's `rating` property (sort highest to lowest); **"price-ascending"** and **"price-descending"**, which sort based on the product's `price` property.
 - Once all above operations are complete, return an object with an `items` property. See View Model below for shape and data types.
 
 ### Frontend implementation
 
-- Pass the `query`, `filterBy` and `sortBy` params to retrieve the list of products. See View Model below for shape and data types.
+- Pass the `query`, `filterBy` and `sortBy` params to retrieve the list of products. See Input Model below for shape and data types.
 
 ### product-search GET Input Model
 
@@ -133,7 +133,7 @@ Returns an object with an items array property that represents all the products 
 ```js
 {
   /* A list of products (see Product View Model)
-    - type: list<productViewModel> */
+    - type: <productViewModel>[] */
   items: [
     ...productViewModel,
 
