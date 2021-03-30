@@ -1,1 +1,1 @@
-![Screenshot](/final.png?raw=true)
+![Screenshot](./final.png?raw=true)
