@@ -1,0 +1,62 @@
+nav {
+	padding: 15px;
+	background: darkblue;
+	color: white;
+}
+
+.quickLinks {
+	text-align: center;
+	border-bottom: 1px solid gray;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.quickLinks a {
+	margin-left: 10px;
+	margin-right: 10px;
+	color: black;
+	text-decoration: none;
+	padding-bottom: 8px;
+}
+
+.active {
+	border-bottom: 5px solid orange;
+	font-weight: 700;
+}
+
+.leftCol,
+.centerCol {
+	border-right: 1px solid gray;
+	min-height: 100vh;
+}
+
+.imgContainer {
+	text-align: center;
+}
+
+#headlineImg {
+	width: 100%;
+	max-width: 500px;
+}
+
+.synopsis {
+	margin-bottom: 0;
+}
+
+.author,
+.adLabel {
+	color: gray;
+	margin-top: 0;
+}
+
+article {
+	border-bottom: 1px solid black;
+}
+
+.adImage {
+	width: 90%;
+	border: 1px solid black;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}

@@ -1,0 +1,49 @@
+body {
+  padding: 15px;
+}
+
+header {
+  align-content: center;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  align-content: space-between;
+}
+
+nav > div {
+  flex: 1;
+}
+
+.links {
+  text-align: center;
+  display: flex;
+}
+
+.links > a {
+  flex: 1;
+}
+
+.search {
+  text-align: right;
+}
+
+#logoImage {
+  display: inline;
+  max-width: 50px;
+}
+
+.searchbar {
+  text-align: right;
+}
+
+main {
+  border-top: 1px solid black;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.tigerImage {
+  max-width: 300px;
+}
