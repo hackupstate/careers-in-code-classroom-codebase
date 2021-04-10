@@ -1,0 +1,27 @@
+.mainContent {
+  padding: 40px;
+}
+section {
+  margin-top: 15px;
+}
+
+.thumbnailImg {
+  margin-top: 15px;
+}
+
+.quantity {
+  width: 30%;
+}
+
+.actionRow {
+  margin-top: 15px;
+}
+
+.cartBtn {
+  width: 50%;
+}
+
+.description {
+  margin-top: 20px;
+  text-align: justify;
+}
