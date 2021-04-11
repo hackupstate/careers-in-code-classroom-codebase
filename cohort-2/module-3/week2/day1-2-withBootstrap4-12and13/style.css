@@ -1,10 +1,12 @@
 .mainContent {
   padding: 40px;
 }
-section {
-  margin-top: 15px;
+
+.nav-link {
+  padding-left: 0;
 }
 
+/* PRODUCT SECTION */
 .thumbnailImg {
   margin-top: 15px;
 }
@@ -24,4 +26,12 @@ section {
 .description {
   margin-top: 20px;
   text-align: justify;
+}
+
+/* FOOTER STYLES */
+footer {
+  padding: 20px;
+}
+.footerNav {
+  max-width: 80%;
 }
