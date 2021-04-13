@@ -1,0 +1,42 @@
+.mainContent {
+  padding: 40px;
+}
+
+/* HEADER AND FOOTER NAVS */
+.nav-link {
+  padding-left: 0;
+}
+
+.navbar-collapse {
+  text-align: right;
+}
+
+/* PRODUCT SECTION */
+.thumbnailImg {
+  margin-top: 15px;
+}
+
+.quantity {
+  width: 30%;
+}
+
+.actionRow {
+  margin-top: 15px;
+}
+
+.cartBtn {
+  width: 50%;
+}
+
+.description {
+  margin-top: 20px;
+  text-align: justify;
+}
+
+/* FOOTER STYLES */
+footer {
+  padding: 20px;
+}
+.footerNav {
+  max-width: 80%;
+}
