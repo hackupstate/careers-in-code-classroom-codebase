@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>Current New York Times Bestsellers</title>
+    <style>
+      * { margin: 0; padding: 0; }
+
+      body {
+        background-color: #eee;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+
+      .container {
+        width: 800px;
+        margin: 0px auto;
+        background-color: #fff;
+        padding: 20px;
+      }
+
+      .list {
+        padding-top: 40px;
+      }
+
+      .book {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .book img {
+        height: 100px;
+        margin-right: 20px;
+      }
+      .book a {
+        margin-left: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      const LIST = `
+        <div class="list">
+          <h2>{name}</h2>
+          {books}
+        </div>
+      `;
+      const BOOK = `
+        <div class="book">
+          <img src="{image}" />
+          <h3>{title} by {author}</h3>
+          <a href="{link}">More info</a>
+        </div>
+      `;
+
+      const date = (new Date().toISOString()).split('T')[0];
+      const r = axios.get(`https://api.nytimes.com/svc/books/v3/lists/overview.json?published_date=${date}&api-key=FOC1KXjCopK9GPeevNa7CMMdg8CesvYI`);
+      r.then(response => {
+        const json = response.data;
+        const allMarkup = json.results.lists.map(list => {
+          let markup = LIST.replace('{name}', list.display_name);
+
+          const bookMarkup = list.books.map(book => {
+            return BOOK
+              .replace('{title}', book.title)
+              .replace('{image}', book.book_image)
+              .replace('{author}', book.author)
+              .replace('{link}', book.amazon_product_url);
+          }).join('');
+
+          return markup.replace('{books}', bookMarkup);
+        }).join('');
+
+        const container = document.createElement('div');
+        container.innerHTML = '<h1>New York Times Bestsellers</h1>' + allMarkup;
+        container.className = 'container';
+        document.body.appendChild(container);
+      });
+    </script>
+  </body>
+</html>
