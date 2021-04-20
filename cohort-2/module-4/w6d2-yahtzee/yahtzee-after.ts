@@ -1,4 +1,4 @@
-const promptSync = require('prompt-sync')();
+const promptSync = require('prompt-sync')({ sigint: true });
 
 const DICE_SYMBOLS = [
   '\u2680', // ⚀
