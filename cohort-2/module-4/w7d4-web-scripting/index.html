@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homework Assignment 26</title>
+</head>
+<body>
+  <div style="width: 960px; margin: 64px auto;">
+    <div>
+      <input id="my-input" type="text" placeholder="Type here!" />
+      <!--
+        Generally, "onclick" attribute handlers are not the best way to build
+        web applications these days, but they are easy to get started with
+      -->
+      <button id="my-button" onclick="myButtonHandler()">Click me!</button>
+    </div>
+    <div>
+      <h1>Latest input value:</h1>
+      <p id="my-display"></p>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function myButtonHandler() {
+      // Change the JavaScript in this function so that the value
+      // of #my-input is copied into #my-display when #my-button is clicked
+      // you should not have to change anything outside of this function
+
+      const myInput = document.querySelector('#my-input');
+      const myDisplay = document.querySelector('#my-display');
+
+      console.log('Input value:', myInput.value);
+      console.log('Displayed value:', myDisplay.innerHTML);
+    }
+  </script>
+</body>
+</html>
