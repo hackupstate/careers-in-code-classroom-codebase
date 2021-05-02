@@ -1,0 +1,28 @@
+.SearchInput {
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+
+  &__Button {
+    outline: none;
+    border: none;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background-color: grey;
+    }
+  }
+  &__Icon {
+    font-size: 20px;
+  }
+  &__Input {
+    height: 40px;
+    width: 100%;
+    border: none;
+    padding-left: 20px;
+    padding-right: 50px;
+  }
+}
