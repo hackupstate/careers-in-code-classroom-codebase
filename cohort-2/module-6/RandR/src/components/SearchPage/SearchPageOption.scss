@@ -1,0 +1,16 @@
+.SearchPageOption {
+  height: 40px;
+
+  &__Text {
+    margin-right: 5px;
+    min-width: 60px;
+    font-size: 14px;
+    align-items: center;
+  }
+
+  &__Select {
+    width: 100%;
+    border: 1px solid lightgrey;
+    padding-left: 20px;
+  }
+}
