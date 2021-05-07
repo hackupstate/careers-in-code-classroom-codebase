@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+			crossorigin="anonymous"
+		/>
+		<link href="style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<nav class="navbar navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand">My To Do List App</a>
+				<form class="d-flex" onsubmit="search(event)">
+					<input
+						class="form-control me-2"
+						type="search"
+						placeholder="Search"
+						aria-label="Search"
+						id="searchField"
+					/>
+					<button class="btn btn-outline-success" type="submit">Search</button>
+				</form>
+			</div>
+		</nav>
+		<main class="container">
+			<div class="searchResults card">
+				<div class="card-body">
+					<h3>Search Results:</h3>
+					<ul id="searchResultsList" class="list-group">
+						<li>No search results yet</li>
+					</ul>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-body">
+					<form onsubmit="addNewTask(event)">
+						<h3>Add new task:</h3>
+						<input
+							type="text"
+							placeholder="Enter new to do here"
+							id="newTaskField"
+							class="form-control"
+						/>
+						<div class="row">
+							<div class="col">
+								<button
+									type="submit"
+									class="btn btn-primary"
+									style="width: 100%"
+								>
+									Add to do
+								</button>
+							</div>
+							<div class="col">
+								<button
+									class="btn btn-danger"
+									onclick="resetToDos()"
+									style="width: 100%"
+								>
+									Reset
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-body">
+					<h3>List:</h3>
+					<ul id="list" class="list-group">
+						<li>No list items yet</li>
+					</ul>
+				</div>
+			</div>
+		</main>
+	</body>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+		crossorigin="anonymous"
+	></script>
+	<script src="script.js"></script>
+</html>
