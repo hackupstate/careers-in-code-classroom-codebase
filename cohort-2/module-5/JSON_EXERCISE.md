@@ -1,17 +1,17 @@
 # JSON Exercise
 
-The server's hostname is `module5.tk`
+The server's hostname is `module5.ml`
 The server is running on tcp port `80` (standard http port)
 
 
 ## Exercise 1
 In the javascript console, convert this string into a javascript object using the native JSON tools in the browser:
-```json
-{"menu":{"id":"file","value":"File","popup":[{"value":"New","onclick":"CreateNewDoc()"},{"value":"Open","onclick":"OpenDoc()"},{"value":"Close","onclick":"CloseDoc()"}]}}
+```javascript
+var jsonString = '{"menu":{"id":"file","value":"File","popup":[{"value":"New","action":"CreateNewDoc"},{"value":"Open","action":"OpenDoc"},{"value":"Close","action":"CloseDoc"}]}}'
 ```
 
 #### Optional next steps
-- Add a new entry to the `popup` array inside of the JSON string, specifying a new menu item for `Save` that has the `onclick` key equal to `SaveDoc()`. After doing this, re-convert the string into a javascript object and ensure that your object has the new entry in the array.
+- Add a new entry to the `popup` array inside of the JSON string, specifying a new menu item for `Save` that has the `action` key equal to `SaveDoc`. After doing this, re-convert the string into a javascript object and ensure that your object has the new entry in the array.
 - What happens when you give the json formatting you are using bad input - does it return null? Throw an error?
 - Take a look into the optional `reviver` parameter: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#Using_the_reviver_parameter. Try out the examples!
 
@@ -21,7 +21,7 @@ In the javascript console, convert this string into a javascript object using th
 Convert the below javascript object into a JSON object:
 
 ```
-{
+var javascriptObject = {
   counts: [150, 12, 4, 37],
   start: '5:00',
   end: '8:00'

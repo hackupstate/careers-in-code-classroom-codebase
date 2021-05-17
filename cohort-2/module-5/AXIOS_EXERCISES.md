@@ -1,9 +1,9 @@
 # Axios Exercises
 
 For each of these exercises, you will need to make a http request to a server I have written with
-axios. Please go to `http://module5.tk` and make all these requests in the javascript console.
+axios. Please go to `http://module5.ml` and make all these requests in the javascript console.
 
-The server's hostname is `module5.tk`
+The server's hostname is `module5.ml`
 The server is running on tcp port `80` (the default)
 
 ## Requests to make to the server
@@ -51,7 +51,7 @@ what you got back from the server and what you see in the web browser seem to co
 
 
 # Bonus material
-Neither of these below tasks is required, but both will only help you to understand `axios` more.
+Neither of these below tasks are required, but both will only help you to understand `axios` more.
 
 ## Bonus mini-project
 Create a new html file. Add `<script src="https://unpkg.com/axios/dist/axios.min.js"></script>` into

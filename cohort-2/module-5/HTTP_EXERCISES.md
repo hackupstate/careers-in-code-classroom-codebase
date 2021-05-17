@@ -4,8 +4,8 @@ For each of these exercises, you will need to make a http request to a server I 
 note down each of your requests (method, path, headers, request body if applicable) and the server's
 response (status code, any headers, and any response body)
 
-The server's hostname is `module5.tk`
-The server is running on tcp port `5000`
+The server's hostname is `module5.ml`
+The server is running on tcp port `80`
 
 ## Requests to make to the server
 

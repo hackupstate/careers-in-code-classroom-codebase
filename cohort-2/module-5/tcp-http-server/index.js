@@ -120,10 +120,10 @@ app.get('/', (req, res) => res.status(200).sendFile(path.join(__dirname, 'index.
 app.get('/styles.css', (req, res) => res.status(200).sendFile(path.join(__dirname, '/styles.css')))
 
 // Day 2, Day 3, Day 4
-app.get('/fruit', (req, res) => res.status(200).send('Apples, Oranges, Banannas'));
+app.get('/fruit', (req, res) => res.status(200).send('Apples, Oranges, Bananas'));
 app.get('/apples', (req, res) => res.status(200).send('Apples!'));
 app.get('/oranges', (req, res) => res.status(200).send('Oranges.'));
-app.post('/banannas', (req, res) => res.status(200).send('Banannas?'));
+app.post('/bananas', (req, res) => res.status(200).send('Bananas?'));
 app.post('/echo', (req, res) => res.status(200).send(req.body));
 function frequencies(body) {
   const words = body.toString().split(' ');
@@ -134,9 +134,11 @@ function frequencies(body) {
 }
 app.post('/text-processing/most-common-word', (req, res) => {
   const freqs = frequencies(req.body);
-  const maxKey = Math.max.apply(Math, Object.keys(frequencies).map(key => parseInt(key, 10)));
-  res.status(200);
-  res.send(freqs[maxKey.toString()]);
+  const entries = Object.entries(freqs);
+  const keys = entries.map(i => i[0]), values = entries.map(i => i[1]);
+  const max = Math.max.apply(Math, values);
+  const maxKey = keys[values.indexOf(max)]
+  res.status(200).send(maxKey+'\n');
 });
 app.post('/text-processing/frequencies', (req, res) => {
   const freqs = frequencies(req.body);

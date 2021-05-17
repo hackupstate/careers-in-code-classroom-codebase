@@ -4,7 +4,7 @@ For each of these exercises, you will need to make a http request to a server I 
 note down each of your requests (method, path, headers, request body if applicable) and the server's
 response (status code, any headers, and any response body)
 
-If not otherwise specified, the server's hostname is `module5.tk`
+If not otherwise specified, the server's hostname is `module5.ml`
 If not otherwise specified, the server is running on tcp port `80`
 
 Feel free to use any tool you'd like to make these http requests - axios, curl, or postman.
@@ -17,7 +17,7 @@ get back an error, refer to the presentation - the format of the authorization h
 particular!
 
 ## Exercise 2
-Make a `GET` request `http://hackupstate.com/`, as you normally would. Ensure that you get back
+Make a `GET` request `https://hackupstate.com`, as you normally would. Ensure that you get back
 what's expected (a bunch of HTML that looks vaugely like the careers in code site). Now, make the
 same request, only this time, include a `Host` header that is something other than
 `hackupstate.com` - maybe `example.com`. What does the response from the server look like? Why do

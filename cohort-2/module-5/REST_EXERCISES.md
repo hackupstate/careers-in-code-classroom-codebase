@@ -51,7 +51,7 @@ during class: `Authorization: Bearer <token goes here>`.
 
 ## Third api
 
-The server's hostname is `module5.tk`
+The server's hostname is `module5.ml`
 The server is running on tcp port `80` (standard http port)
 
 On the module server, I have a number of endpoints for managing resources that relate to careers in

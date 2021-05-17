@@ -4,7 +4,7 @@
 2. Try to make a `GET` request to `http://careersincode.org` using axios.
   - Are you successful in doing this?
   - What do you see in the javascript console?
-3. Next, make a `GET` request to `http://module5.tk/fruit`, including the header `X-Foo` set to `bar`.
+3. Next, make a `GET` request to `http://module5.ml/fruit`, including the header `X-Foo` set to `bar`.
   - Is your request successful?
   - Take a look at the network pane. Locate the preflight request made for this request.
     - What origins does this server allow?
