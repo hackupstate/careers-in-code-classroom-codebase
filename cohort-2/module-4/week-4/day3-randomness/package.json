@@ -1,0 +1,16 @@
+{
+	"name": "week4day3",
+	"version": "1.0.0",
+	"description": "",
+	"main": "arrayWork.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"camelcase": "^6.2.0"
+	},
+	"type": "module"
+}

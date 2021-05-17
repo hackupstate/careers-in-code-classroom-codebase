@@ -1,0 +1,15 @@
+{
+  "name": "w7d1-card-trick",
+  "version": "1.0.0",
+  "description": "",
+  "main": "card-trick-after.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cards": "^1.1.0",
+    "prompt-sync": "^4.2.0"
+  }
+}

@@ -1,0 +1,40 @@
+header.row {
+	margin-top: 15px;
+	border-bottom: 1px solid #ccc;
+}
+
+#messages {
+	height: calc(100vh - 140px);
+}
+
+.messageText {
+	background: blue;
+	color: white;
+	padding: 10px;
+	display: inline-block;
+	border-radius: 30px;
+}
+
+.userMessageText {
+	background: lightgray;
+	color: black;
+}
+
+.message {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.timestamp {
+	color: darkgray;
+	font-size: 10px;
+}
+
+.inputBar {
+	padding-top: 10px;
+	border-top: 1px solid #ccc;
+}
+
+.inputBar .btn {
+	width: 100%;
+}
