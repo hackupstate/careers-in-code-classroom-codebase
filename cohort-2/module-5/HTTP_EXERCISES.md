@@ -5,7 +5,7 @@ note down each of your requests (method, path, headers, request body if applicab
 response (status code, any headers, and any response body)
 
 The server's hostname is `module5.ml`
-The server is running on tcp port `80`
+The server is running on tcp port `5000`
 
 ## Requests to make to the server
 
