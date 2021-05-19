@@ -1,0 +1,66 @@
+.Wiki {
+  padding: 20px;
+
+  .token.operator {
+    background: none;
+  }
+
+  &__Heading {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  &__Subheading {
+    font-size: 16px;
+    padding-right: 20px;
+  }
+
+  &__Menu {
+    margin-top: 20px;
+  }
+
+  &__MenuButton {
+    border: none;
+    background: none;
+    text-decoration: underline;
+    font-size: 14px;
+    color: blue;
+  }
+
+  &__MarkdownViewer {
+    margin-top: 30px;
+    border-top: 1px solid lightgrey;
+    padding-top: 20px;
+
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 24px;
+      color: tomato;
+      strong {
+        font-size: 22px;
+        color: darkred;
+        font-weight: 500;
+      }
+    }
+    h3 {
+      font-size: 20px;
+    }
+    p,
+    li,
+    pre,
+    span,
+    code {
+      font-size: 14px !important;
+    }
+
+    pre[class*="language-"] {
+      margin-bottom: 20px;
+    }
+
+    hr {
+      margin: 30px 0px;
+    }
+  }
+}
