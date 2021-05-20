@@ -60,6 +60,8 @@ When the request completes (in the `.then` of the promise axios returns), log ou
 If you're able to get that working, try to display the status code of the response to the screen (create a new dom node,
 set the content to the status code, and append it to the body).
 
+If you need a hint, take a look at slide 87 of the presentation: https://docs.google.com/presentation/d/1D-sZAYy7ISxeyckvClg9m9J7R4vFEy_1eEyUcif-fLM/edit#slide=id.g554ce1dfac_0_103
+
 
 ## Bonus research
 We talked about promises today (and yesterday). Promises could probably be a class of their own, and you'll surely
