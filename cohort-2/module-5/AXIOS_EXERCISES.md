@@ -1,7 +1,7 @@
 # Axios Exercises
 
 For each of these exercises, you will need to make a http request to a server I have written with
-axios. Please go to `http://module5.ml` and make all these requests in the javascript console.
+axios. Please go to `http://module5.ml` in a web browser and make all these requests in the javascript console.
 
 The server's hostname is `module5.ml`
 The server is running on tcp port `80` (the default)
