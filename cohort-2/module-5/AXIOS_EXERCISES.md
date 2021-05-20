@@ -10,10 +10,10 @@ The server is running on tcp port `80` (the default)
 
 ### Exercise 1
 
-Make a request to this endpoint to return a list of fruit.
+Make a request to this endpoint to return a some text.
 ```
 Method: GET
-Path: /fruit
+Path: /apples
 Headers: none
 ```
 
@@ -40,7 +40,7 @@ Method: GET
 Path: /lockbox
 Headers:
   Header name: Authorization
-  Header value: either the password, or something else to test the other case
+  Header value: supersecret
 ```
 
 ### Exercise 4
