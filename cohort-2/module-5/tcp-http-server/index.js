@@ -122,13 +122,16 @@ app.use((req, res, next) => {
       res.status(res.statusCode);
       r.body.pipe(res);
     });
+    return
   }
   if (req.headers['host'] === 'careersincode.org') {
     fetch(`https://hackupstate.com/${req.originalUrl}`, { headers: req.headers }).then(r => {
       res.status(res.statusCode);
       r.body.pipe(res);
     });
+    return
   }
+  next();
 });
 
 // Home page
@@ -192,6 +195,16 @@ app.get('/protected-resource', (req, res) => {
     return res.status(403).send(`Your token was not found in the server's registry.`);
   }
   return res.status(200).send('You specified a valid token! Thank you.');
+});
+
+app.post('/image-upload', (req, res) => {
+  if (!req.headers['content-type']) {
+    res.status(400).send('Please sent a content type!');
+  }
+  if (!['image/png', 'image/jpeg'].includes(req.headers['content-type'])) {
+    res.status(400).send('Image data unable to be processed - ensure you specify the correct content-type!');
+  }
+  res.status(200).send('Image successfully received, thanks!');
 });
 
 // Day 6: JSON
