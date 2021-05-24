@@ -4,6 +4,7 @@ const path = require('path');
 const uuid = require('uuid');
 const session = require('express-session');
 const fs = require('fs');
+const fetch = require('node-fetch');
 
 const sessionMiddleware = session({
   secret: 'wxSA9TipQyLdKUNmPSaVpVnDDdh3pk/FadecsBcYVl',
@@ -113,6 +114,21 @@ app.use((req, res, next) => {
     }
     next();
   });
+});
+
+app.use((req, res, next) => {
+  if (req.headers['host'] === 'hackupstate.com') {
+    fetch(`https://hackupstate.com/${req.originalUrl}`, { headers: req.headers }).then(r => {
+      res.status(res.statusCode);
+      r.body.pipe(res);
+    });
+  }
+  if (req.headers['host'] === 'careersincode.org') {
+    fetch(`https://hackupstate.com/${req.originalUrl}`, { headers: req.headers }).then(r => {
+      res.status(res.statusCode);
+      r.body.pipe(res);
+    });
+  }
 });
 
 // Home page
