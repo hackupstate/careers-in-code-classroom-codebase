@@ -11,7 +11,9 @@ Feel free to use any tool you'd like to make these http requests - axios, curl, 
 
 ## Exercise 1
 There is an endpoint that exists on the server, `POST /tokens`. When a request is made to this
-endpoint, a new token is generated, and returned in the response. Now, with this token, make a
+endpoint, a new token is generated, and returned in the response.
+
+Now, with this token, make a
 request to `GET /protected-resource` using an authorization header with a bearer token in it. If you
 get back an error, refer to the presentation - the format of the authorization header is very
 particular!
