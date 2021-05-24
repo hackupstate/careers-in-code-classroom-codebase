@@ -183,7 +183,7 @@ app.post('/tokens', (req, res) => {
   res.status(201).send(`Your token was created! It is ${token}.`);
 });
 app.get('/protected-resource', (req, res) => {
-  const parts = req.headers['authorization'] || '';
+  const parts = (req.headers['authorization'] || '').split(' ');
   if (parts.length < 2) {
     return res.status(401).send('You did not specify a token, that is required for this endpoint.');
   }
