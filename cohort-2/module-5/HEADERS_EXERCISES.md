@@ -32,7 +32,7 @@ If you need help, scan through the host header section of the presentation.
 ## Exercise 3
 (Note: it's probably going to be easiest to do this exercise in postman)
 
-There's an endpoint on the module5.ml server - `GET /image-upload`. I'd like you to upload an image to it. The image must be a png or a jpeg, but otherwise, it doesn't really matter what it's an image of. To upload a file like an image using postman, under the "body" tab, select "binary", and choose a file from your file system.
+There's an endpoint on the module5.ml server - `POST /image-upload`. I'd like you to upload an image to it. The image must be a png or a jpeg, but otherwise, it doesn't really matter what it's an image of. To upload a file like an image using postman, under the "body" tab, select "binary", and choose a file from your file system.
 
 Now that you've selected a file, set the content type header to match the file format. If you don't know what the mimetype is for your file, look it up online!
 
