@@ -23,9 +23,9 @@ Make a `GET` request `https://hackupstate.com`, as you normally would. Ensure th
 what's expected (a bunch of HTML that looks vaugely like the careers in code site).
 
 Now, because the module5.ml server is hosted on the same server that the hackupstate.com / careersincode.org server is hosted,
-alter the `Host` header so that the web server will return the contents of the `hackupstate.com`.
+alter the `Host` header so that the web server will return the html contents of `hackupstate.com`.
 
-Also, give this a try with the careers in code site too!
+Also, give this a try with the careers in code site (`http://careersincode.org`) too!
 
 If you need help, scan through the host header section of the presentation.
 
