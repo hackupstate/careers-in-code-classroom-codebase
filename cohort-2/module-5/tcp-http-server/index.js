@@ -175,7 +175,7 @@ app.get('/lockbox', (req, res) => {
 // Day 5: Headers
 const TOKENS = [];
 app.post('/tokens', (req, res) => {
-  const token = uuid.v4().replace('-', '');
+  const token = uuid.v4().replace(/-/g, '');
   TOKENS.push({
     key: token,
     permissions: ['read'],
