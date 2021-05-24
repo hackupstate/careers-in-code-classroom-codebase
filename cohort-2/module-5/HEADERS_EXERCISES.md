@@ -32,7 +32,7 @@ Also, give this a try with the careers in code site (`http://careersincode.org`)
 If you need help, scan through the host header section of the presentation.
 
 ## Exercise 3
-(Note: it's probably going to be easiest to do this exercise in postman)
+(Note: it's probably going to be easiest to do this exercise in postman. **Also, please use port `5000` instead of port `80`!**)
 
 There's an endpoint on the module5.ml server - `POST /image-upload`. I'd like you to upload an image to it. The image must be a png or a jpeg, but otherwise, it doesn't really matter what it's an image of. To upload a file like an image using postman, under the "body" tab, select "binary", and choose a file from your file system.
 
