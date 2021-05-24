@@ -176,7 +176,7 @@ app.get('/lockbox', (req, res) => {
 const TOKENS = [];
 app.post('/tokens', (req, res) => {
   const token = uuid.v4().replace('-', '');
-  token.push({
+  TOKENS.push({
     key: token,
     permissions: ['read'],
   });
