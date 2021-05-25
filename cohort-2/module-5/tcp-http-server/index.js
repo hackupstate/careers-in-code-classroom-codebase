@@ -208,35 +208,45 @@ app.post('/image-upload', (req, res) => {
 });
 
 // Day 6: JSON
+app.get('/users', (req, res) => {
+  res.status(200).send('Ryan Gaus-readwrite-201 E Jefferson St-Syracuse-NY;Suzie John-readonly-235 Harrison St-Syracuse-NY');
+});
+app.get('/users2', (req, res) => {
+  res.status(200).send('Ryan Gaus-readwrite-201 E Jefferson St-Syracuse-NY-13202;Suzie John-readonly-235 Harrison St-Syracuse-NY-13202');
+});
+app.get('/users3', (req, res) => {
+  res.status(200).send('Ryan Gaus-201 E Jefferson St-Syracuse-NY-13202;Suzie John-235 Harrison St-Syracuse-NY-13202');
+});
+app.get('/users4', (req, res) => {
+  res.status(200).send('Jean-Luc Picard-readwrite-201 E Jefferson St-Syracuse-NY;Suzie John-readonly-235 Harrison St-Syracuse-NY');
+});
 app.get('/json', (req, res) => res.status(200).send({
   hello: 'world',
   numbers: [1, 2, 3, 4, 5],
 }));
-app.get('/number-list', (req, res) => res.status(200).send({
-  numbers: [
-    7529,
-    5824,
-    78,
-    627,
-    598,
-    3151,
-    3857,
-    12,
-    3,
-    52614,
-    395,
-    817,
-    36,
-    4781,
-    39,
-    75,
-    42,
-    3856,
-    7143,
-    1085,
-    26,
-  ],
-}));
+app.get('/number-list', (req, res) => res.status(200).send([
+  7529,
+  5824,
+  78,
+  627,
+  598,
+  3151,
+  3857,
+  12,
+  3,
+  52614,
+  395,
+  817,
+  36,
+  4781,
+  39,
+  75,
+  42,
+  3856,
+  7143,
+  1085,
+  26,
+]));
 
 // Day 7: REST API design
 app.get('/users', (req, res) => {
