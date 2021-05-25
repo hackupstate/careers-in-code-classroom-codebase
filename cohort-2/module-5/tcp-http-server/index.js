@@ -208,7 +208,7 @@ app.post('/image-upload', (req, res) => {
 });
 
 // Day 6: JSON
-app.get('/users', (req, res) => {
+app.get('/users1', (req, res) => {
   res.status(200).send('Ryan Gaus-teacher-201 E Jefferson St-Syracuse-NY;Suzie John-student-235 Harrison St-Syracuse-NY');
 });
 app.get('/users2', (req, res) => {
