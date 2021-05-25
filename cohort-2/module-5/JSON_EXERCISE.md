@@ -17,7 +17,7 @@ var jsonString = '{"menu":{"id":"file","value":"File","popup":[{"value":"New","a
 
 #### Optional next steps
 - Add a new entry to the `popup` array inside of the JSON string, specifying a new menu item for `Save` that has the `action` key equal to `SaveDoc`. After doing this, re-convert the string into a javascript object and ensure that your object has the new entry in the array.
-- What happens when you give the json formatting you are using bad input - does it return null? Throw an error?
+- What happens when you give the json parsing function you are using a bad input value (ie, a string that doesn't contain JSON) - does it return null? Throw an error?
 <!--
 - Take a look into the optional `reviver` parameter: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#Using_the_reviver_parameter. Try out the examples!
 -->
@@ -35,7 +35,7 @@ var javascriptObject = {
 ```
 
 #### Optional next steps
-- Can you make the json output string span multiple lines and be properly indented? In other words, look like the below when it's outputted? You may need to look this one up online if you can't figure it out on your own!
+- By default, javascript smooshes together the whole JSON object onto one line. Can you make the JSON output string span multiple lines and be properly indented - In other words, look like the below when it's outputted? You may need to look this one up online!
 ```
 {
   "counts": [150, 12, 4, 37],
@@ -57,7 +57,7 @@ Using your knowledge of the JSON format, build a json object by hand inside of a
 To check your work, try using the browser json parsing function to see if your json can be properly decded. If not, you will get an error.
 
 #### Optional next steps
-- Add a student to the `students` array in the JSON named `John "Jacob Jingleheimer" Schmidt`.
+- Add a student to the `students` array in the JSON named `John "Jacob Jingleheimer" Schmidt`. Hint - this might require some research online!
 - Change every student entry in the `students` array from a `string` to an `object` with two keys in it:
   - first, a `name` key, that maps to the existing student's name
   - second, a `favoriteTeacherName` key that maps to a `string` equal to the name of the student's favorite teacher.
@@ -66,7 +66,7 @@ To check your work, try using the browser json parsing function to see if your j
 ## Exercise 4
 
 Make a GET request to the server's `/json` endpoint. Note down the response headers and response
-body.
+body you receive.
 
 #### Optional next steps
 (none for this exercise)
@@ -77,8 +77,7 @@ Make a GET request to the server's `/number-list` endpoint using `axios`. This r
 
 Extract the data out of the promise returned by axios with `.then`.
 
-Inside the callback in the `.then`, write a program to extract the array of numbers from the response. Then, sum them all up to produce a total. Use `console.log` to print out the result to the console.
+Inside the callback in the `.then`, write a program to extract the array of numbers from the response. Then, sum them all up to produce a total. Use `console.log` to print out the total to the console.
 
 #### Optional next steps
-- Try doing something else to the numbers - maybe subtract them instead of adding them?
-- Try looping through the array in reverse instead when you do your calculation.
+(none for this exercise)
