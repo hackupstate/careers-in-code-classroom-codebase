@@ -13,8 +13,9 @@ var jsonString = '{"menu":{"id":"file","value":"File","popup":[{"value":"New","a
 #### Optional next steps
 - Add a new entry to the `popup` array inside of the JSON string, specifying a new menu item for `Save` that has the `action` key equal to `SaveDoc`. After doing this, re-convert the string into a javascript object and ensure that your object has the new entry in the array.
 - What happens when you give the json formatting you are using bad input - does it return null? Throw an error?
+<!--
 - Take a look into the optional `reviver` parameter: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#Using_the_reviver_parameter. Try out the examples!
-
+-->
 
 
 ## Exercise 2
@@ -37,8 +38,9 @@ var javascriptObject = {
   "end": "8:00"
 }
 ```
+<!--
 - Take a look into the optional `replacer` parameter: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#The_replacer_parameter
-
+-->
 
 ## Exercise 3
 Using your knowledge of the JSON format, build a json object by hand inside of a string that follows this format:
