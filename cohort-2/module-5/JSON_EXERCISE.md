@@ -12,7 +12,7 @@ Each exercise has an `Optional next steps` section below. These aren't required,
 ## Exercise 1
 In the javascript console, convert this string into a javascript object using the native JSON tools in the browser:
 ```javascript
-var jsonString = '{"menu":{"id":"file","value":"File","popup":[{"value":"New","action":"CreateNewDoc"},{"value":"Open","action":"OpenDoc"},{"value":"Close","action":"CloseDoc"}]}}'
+let jsonString = '{"menu":{"id":"file","value":"File","popup":[{"value":"New","action":"CreateNewDoc"},{"value":"Open","action":"OpenDoc"},{"value":"Close","action":"CloseDoc"}]}}'
 ```
 
 #### Optional next steps
@@ -27,7 +27,7 @@ var jsonString = '{"menu":{"id":"file","value":"File","popup":[{"value":"New","a
 Using the javascript consule, convert the below javascript object into a string containing a JSON object:
 
 ```
-var javascriptObject = {
+let javascriptObject = {
   counts: [150, 12, 4, 37],
   start: '5:00',
   end: '8:00'
