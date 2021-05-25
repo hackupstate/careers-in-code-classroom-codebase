@@ -209,16 +209,16 @@ app.post('/image-upload', (req, res) => {
 
 // Day 6: JSON
 app.get('/users', (req, res) => {
-  res.status(200).send('Ryan Gaus-readwrite-201 E Jefferson St-Syracuse-NY;Suzie John-readonly-235 Harrison St-Syracuse-NY');
+  res.status(200).send('Ryan Gaus-teacher-201 E Jefferson St-Syracuse-NY;Suzie John-student-235 Harrison St-Syracuse-NY');
 });
 app.get('/users2', (req, res) => {
-  res.status(200).send('Ryan Gaus-readwrite-201 E Jefferson St-Syracuse-NY-13202;Suzie John-readonly-235 Harrison St-Syracuse-NY-13202');
+  res.status(200).send('Ryan Gaus-teacher-201 E Jefferson St-Syracuse-NY-13202;Suzie John-student-235 Harrison St-Syracuse-NY-13202');
 });
 app.get('/users3', (req, res) => {
   res.status(200).send('Ryan Gaus-201 E Jefferson St-Syracuse-NY-13202;Suzie John-235 Harrison St-Syracuse-NY-13202');
 });
 app.get('/users4', (req, res) => {
-  res.status(200).send('Jean-Luc Picard-readwrite-201 E Jefferson St-Syracuse-NY;Suzie John-readonly-235 Harrison St-Syracuse-NY');
+  res.status(200).send('Jean-Luc Picard-teacher-201 E Jefferson St-Syracuse-NY;Suzie John-student-235 Harrison St-Syracuse-NY');
 });
 app.get('/json', (req, res) => res.status(200).send({
   hello: 'world',
