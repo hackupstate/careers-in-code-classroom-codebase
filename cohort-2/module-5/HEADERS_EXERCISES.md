@@ -24,10 +24,9 @@ Let's pretend that the module5.ml server also hosts the `http://hackupstate.com`
 Make a `GET` request `https://hackupstate.com`, as you normally would. Ensure that you get back
 what's expected (a bunch of HTML that looks vaugely like the hack upstate site).
 
-Now, because the module5.ml server is hosted on the same server that the hackupstate.com / careersincode.org server is hosted,
-alter the `Host` header so that the web server will return the html contents of `hackupstate.com`.
+Now, make a request to `http://module5.ml` - you should get back some HTML that looks like the module5 home page.
 
-Also, give this a try with the careers in code site (`http://careersincode.org`) too!
+Now, WITHOUT CHANGING THE URL, alter the host header so that the HTML returned matches the HTML you got back with the first request to `http://hackupstate.com`. Remember - in this scenario, the hack upstate web page and module5.ml are hosted on the same physical computer!
 
 If you need help, scan through the host header section of the presentation.
 
