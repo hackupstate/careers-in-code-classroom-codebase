@@ -22,7 +22,7 @@ particular!
 Let's pretend that the module5.ml server also hosts the `http://hackupstate.com` and `http://careersincode.org` sites.
 
 Make a `GET` request `https://hackupstate.com`, as you normally would. Ensure that you get back
-what's expected (a bunch of HTML that looks vaugely like the careers in code site).
+what's expected (a bunch of HTML that looks vaugely like the hack upstate site).
 
 Now, because the module5.ml server is hosted on the same server that the hackupstate.com / careersincode.org server is hosted,
 alter the `Host` header so that the web server will return the html contents of `hackupstate.com`.
