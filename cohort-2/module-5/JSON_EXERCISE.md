@@ -68,8 +68,11 @@ body.
 
 ## Exercise 5
 
-Make a GET request to the server's `/number-list` endpoint using `axios`. Write a program to extract the array of
-numbers from the response (the response is encoded as json) and sum them all up. Use `console.log` to print out the result to the console.
+Make a GET request to the server's `/number-list` endpoint using `axios`. This request will return a list of numbers encoded as a JSON array.
+
+Extract the data out of the promise returned by axios with `.then`.
+
+Inside the callback in the `.then`, write a program to extract the array of numbers from the response. Then, sum them all up to produce a total. Use `console.log` to print out the result to the console.
 
 #### Optional next steps
 - Try doing something else to the numbers - maybe subtract them instead of adding them?
