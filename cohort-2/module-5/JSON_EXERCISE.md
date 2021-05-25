@@ -19,7 +19,7 @@ var jsonString = '{"menu":{"id":"file","value":"File","popup":[{"value":"New","a
 
 
 ## Exercise 2
-Convert the below javascript object into a JSON object:
+Using the javascript consule, convert the below javascript object into a string containing a JSON object:
 
 ```
 var javascriptObject = {
