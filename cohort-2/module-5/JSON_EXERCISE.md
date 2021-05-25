@@ -1,7 +1,12 @@
 # JSON Exercise
 
 The server's hostname is `module5.ml`
+
 The server is running on tcp port `80` (standard http port)
+
+
+## READ THIS
+Each exercise has an `Optional next steps` section below. These aren't required, but, if you have time or want to go into more detail on a topic, give them a try.
 
 
 ## Exercise 1
