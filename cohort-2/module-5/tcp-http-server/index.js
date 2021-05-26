@@ -430,6 +430,84 @@ function studentsAssignmentsDelete(req, res) {
 }
 app.delete('/students/:id/assignments/:aid', studentsAssignmentsDelete);
 
+
+
+
+
+
+
+
+
+
+
+
+const CARS_FILE = '/tmp/cars.json';
+const CARS = getFile(CARS_FILE);
+
+function carsCreate(req, res) {
+  const car = {...req.body, id: uuid.v4()};
+  CARS.push(car);
+  res.status(201).send(car);
+
+  saveFile(CARS_FILE, CARS);
+}
+app.post('/cars', carsCreate);
+
+// Read
+function carsReadList(req, res) {
+  res.status(200).send({results: CARS});
+}
+app.get('/cars', carsReadList);
+function carsReadById(req, res) {
+  for (let i = 0; i < CARS.length; i++) {
+    const car = CARS[i];
+    if (cat.id === req.params.id) {
+      res.status(200).send(cat);
+      return;
+    }
+  }
+  res.status(404).send({detail: 'No such car with id '+req.params.id+' exists!'});
+}
+app.get('/cars/:id', carsReadById);
+
+// Update
+function carsUpdate(req, res) {
+  for (let i = 0; i < CARS.length; i++) {
+    if (CARS[i].id === req.params.id) {
+      CARS[i] = Object.assign({}, CARS[i], req.body);
+
+      res.status(200);
+      res.send(CARS[i]);
+      saveFile(CARS_FILE, CARS);
+      return;
+    }
+  }
+  res.status(404);
+  res.send({detail: 'No such car with id '+req.params.id+' exists!'});
+
+  saveFile(CARS_FILE, CARS);
+}
+app.put('/cars/:id', carsUpdate);
+
+// Delete
+function carsDelete(req, res) {
+  for (let i = 0; i < CARS.length; i++) {
+    if (CARS[i].id === req.params.id) {
+      CARS.splice(i, 1);
+      res.status(204).end();
+      return;
+    }
+  }
+  res.status(404);
+  res.send({detail: 'No such car with id '+req.params.id+' exists!'});
+
+  saveFile(CARS_FILE, CARS);
+}
+app.delete('/cars/:id', carsDelete);
+
+
+
+
 // Mock version of Joey's API
 const PRODUCT_DATABASE = require('./joey-api-mock-data');
 
