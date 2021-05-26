@@ -486,8 +486,8 @@ app.get('/cars', carsReadList);
 function carsReadById(req, res) {
   for (let i = 0; i < CARS.length; i++) {
     const car = CARS[i];
-    if (cat.id === req.params.id) {
-      res.status(200).send(cat);
+    if (car.id === req.params.id) {
+      res.status(200).send(car);
       return;
     }
   }
