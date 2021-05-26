@@ -281,7 +281,7 @@ function getFile(filename) {
   }
 }
 function saveFile(filename, data) {
-  fs.writeFileSync(filename, JSON.stringify(data));
+  fs.writeFileSync(filename, JSON.stringify(data, null, 2));
 }
 const STUDENTS_FILE = '/tmp/students.json';
 const ASSIGNMENTS_FILE = '/tmp/assignments.json';
@@ -289,6 +289,11 @@ const STUDENTS = getFile(STUDENTS_FILE);
 const ASSIGNMENTS = getFile(ASSIGNMENTS_FILE);
 
 function studentsCreate(req, res) {
+  if (typeof req.body === 'string') {
+    res.status(400).send({detail: "Body is not formatted correctly!"});
+    return
+  }
+
   const student = {...req.body, id: uuid.v4()};
   STUDENTS.push(student);
   res.status(201);
@@ -298,6 +303,11 @@ function studentsCreate(req, res) {
 }
 app.post('/students', studentsCreate);
 function studentsReadByIdAssignmentsCreate(req, res) {
+  if (typeof req.body === 'string') {
+    res.status(400).send({detail: "Body is not formatted correctly!"});
+    return
+  }
+
   const assignment = {...req.body, id: uuid.v4(), studentId: req.params.id};
   ASSIGNMENTS.push(assignment);
   res.status(201);
@@ -360,6 +370,11 @@ app.get('/students/:id/assignments/:aid', studentsReadByIdAssignmentsReadById);
 
 // Update
 function studentsUpdate(req, res) {
+  if (typeof req.body === 'string') {
+    res.status(400).send({detail: "Body is not formatted correctly!"});
+    return
+  }
+
   for (let i = 0; i < STUDENTS.length; i++) {
     if (STUDENTS[i].id === req.params.id) {
       STUDENTS[i] = Object.assign({}, STUDENTS[i], req.body);
@@ -377,6 +392,11 @@ function studentsUpdate(req, res) {
 }
 app.put('/students/:id', studentsUpdate);
 function studentsAssignmentsUpdate(req, res) {
+  if (typeof req.body === 'string') {
+    res.status(400).send({detail: "Body is not formatted correctly!"});
+    return
+  }
+
   for (let i = 0; i < ASSIGNMENTS.length; i++) {
     const assignment = ASSIGNMENTS[i];
     if (assignment.id === req.params.aid && assignment.studentId === req.params.id) {
@@ -445,6 +465,11 @@ const CARS_FILE = '/tmp/cars.json';
 const CARS = getFile(CARS_FILE);
 
 function carsCreate(req, res) {
+  if (typeof req.body === 'string') {
+    res.status(400).send({detail: "Body is not formatted correctly!"});
+    return
+  }
+
   const car = {...req.body, id: uuid.v4()};
   CARS.push(car);
   res.status(201).send(car);
@@ -472,6 +497,11 @@ app.get('/cars/:id', carsReadById);
 
 // Update
 function carsUpdate(req, res) {
+  if (typeof req.body === 'string') {
+    res.status(400).send({detail: "Body is not formatted correctly!"});
+    return
+  }
+
   for (let i = 0; i < CARS.length; i++) {
     if (CARS[i].id === req.params.id) {
       CARS[i] = Object.assign({}, CARS[i], req.body);
