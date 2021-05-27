@@ -4,7 +4,7 @@ At the beginning of this module, I showed a small web application that shows the
 sellers list. Your task is to recreate that!
 
 First off, you will need a new york times api token in order to access their api. Follow these steps
-to generate one: https://developer.nytimes.com/get-started.
+to generate one: https://developer.nytimes.com/get-started. When given the option to select an api, pick the "books api".
 
 1. Start by making a basic html page with a `<html>`, `<head>`, `<body>`, and `<title>`.
 2. Add a `div` to the page, with an id you can target later - ie, `<div id="mydata"></div>`
