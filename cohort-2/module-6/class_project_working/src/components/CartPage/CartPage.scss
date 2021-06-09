@@ -1,0 +1,47 @@
+.CartPage {
+  &__Heading {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    padding-bottom: 15px;
+  }
+  &__ItemHeadings {
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 20px;
+    font-size: 14px;
+  }
+  &__LineItemRow {
+    border-bottom: 1px solid lightgrey;
+  }
+  &__LineItemThumbnail {
+    margin-right: 10px;
+  }
+  &__LineItemName {
+    font-weight: bold;
+  }
+  &__LineItemPrice {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  &__RemoveButton {
+    border: none;
+    background: none;
+    text-decoration: underline;
+    font-size: 14px;
+    color: grey;
+    padding: 0px;
+  }
+  &__CheckoutButton {
+    height: 45px;
+    width: 100%;
+    font-weight: 500;
+  }
+  &__Subtotal {
+    font-weight: 500;
+  }
+  &__SubtotalDisclaimer {
+    font-size: 14px;
+    text-align: center;
+  }
+}
