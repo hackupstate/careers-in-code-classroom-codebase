@@ -1,0 +1,20 @@
+.Header {
+  border-bottom: 1px solid lightgrey;
+
+  .bg-light {
+    background-color: white !important;
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .icon-link {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .icon-link:hover {
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+  }
+}
