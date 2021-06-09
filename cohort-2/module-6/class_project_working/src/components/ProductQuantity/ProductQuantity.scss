@@ -1,0 +1,33 @@
+.ProductQuantity {
+  &__Box {
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    width: 160px;
+    height: 40px;
+    overflow: hidden;
+  }
+  &__Label {
+    font-size: 14px;
+  }
+  &__Increase,
+  &__Decrease {
+    background-color: lightgrey;
+    height: 100%;
+    width: 40px;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: grey;
+    }
+  }
+
+  &__Quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
