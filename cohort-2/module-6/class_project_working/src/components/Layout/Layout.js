@@ -21,6 +21,10 @@ export const Layout = (props) => {
             <CartPage />
           </Route>
 
+          <Route path="/products/:id">
+            <p>ProductDetailPage</p>
+          </Route>
+
           <Route path="/wiki">
             <Wiki />
           </Route>
