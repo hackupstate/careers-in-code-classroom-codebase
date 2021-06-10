@@ -1,5 +1,11 @@
-import { Link } from "react-router-dom"
+import React from "react"
 import "./Header.scss"
+
+/**
+ * This file contains the header, which has the main navigation links.
+ */
+
+import { Link } from "react-router-dom"
 
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome"
 import { faSearch, faShoppingCart } from "@fortawesome/free-solid-svg-icons"
@@ -7,27 +13,36 @@ import { faSearch, faShoppingCart } from "@fortawesome/free-solid-svg-icons"
 export const Header = (props) => {
   return (
     <div className="Header">
-      <nav className="navbar navbar-expand-md navbar-light bg-light mb-4">
+      <nav className="navbar navbar-expand-md navbar-light bg-light">
         <Link className="navbar-brand" to="/">
           RandR
         </Link>
 
+        <div className="d-flex flex-row d-md-none ml-auto mr-4">
+          <Link className="mr-3 icon-link" to="/search">
+            <Icon icon={faSearch} />
+          </Link>
+          <Link className="icon-link" to="/cart">
+            <Icon icon={faShoppingCart} />
+          </Link>
+        </div>
+
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-          aria-controls="navbarCollapse"
+          data-toggle="collapse"
+          data-target="#hamburger"
+          aria-controls="hamburger"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarCollapse">
+        <div className="collapse navbar-collapse" id="hamburger">
           <ul className="navbar-nav mr-auto ml-auto">
             <li className="nav-item mr-md-5">
-              <Link className="nav-link" aria-current="page" to="/">
+              <Link className="nav-link" to="/">
                 Home
               </Link>
             </li>
