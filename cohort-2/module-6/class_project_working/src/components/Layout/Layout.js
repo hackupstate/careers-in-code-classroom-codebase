@@ -4,6 +4,7 @@ import { HomePage } from "../HomePage/HomePage"
 import { SearchPage } from "../SearchPage/SearchPage"
 import { Wiki } from "../../wiki/Wiki"
 import { CartPage } from "../CartPage/CartPage"
+import { ProductDetailPage } from "../ProductDetailPage/ProductDetailPage"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
 export const Layout = (props) => {
@@ -22,7 +23,7 @@ export const Layout = (props) => {
           </Route>
 
           <Route path="/products/:id">
-            <p>ProductDetailPage</p>
+            <ProductDetailPage />
           </Route>
 
           <Route path="/wiki">
