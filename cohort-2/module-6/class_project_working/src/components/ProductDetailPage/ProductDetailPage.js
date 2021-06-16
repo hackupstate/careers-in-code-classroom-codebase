@@ -44,7 +44,16 @@ export const ProductDetailPage = (props) => {
                 setQuantity(quantity <= 1 ? 1 : quantity - 1)
               }}
             />
-            <button className="ProductDetailPage__AddToCartButton btn btn-primary mt-3 ml-md-3">
+            <button
+              className="ProductDetailPage__AddToCartButton btn btn-primary mt-3 ml-md-3"
+              onClick={() => {
+                axios
+                  .put("/api/cart-add", { id: item.id, quantity })
+                  .then((response) => {
+                    // showToast("Added to cart")
+                  })
+              }}
+            >
               Add to Cart
             </button>
           </div>
