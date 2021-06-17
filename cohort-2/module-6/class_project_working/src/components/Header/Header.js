@@ -1,5 +1,7 @@
 import React from "react"
 import "./Header.scss"
+import { useStore } from "../../store/store"
+import { updateUsername, toggleTheme } from "../../store/actions"
 
 /**
  * This file contains the header, which has the main navigation links.
@@ -11,12 +13,32 @@ import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome"
 import { faSearch, faShoppingCart } from "@fortawesome/free-solid-svg-icons"
 
 export const Header = (props) => {
+  const [store, dispatch] = useStore()
+
   return (
     <div className="Header">
-      <nav className="navbar navbar-expand-md navbar-light bg-light">
+      <nav
+        className={`navbar navbar-expand-md navbar-${store.theme} bg-${store.theme}`}
+      >
         <Link className="navbar-brand" to="/">
-          RandR
+          {store.username}
         </Link>
+
+        <button
+          onClick={() => {
+            dispatch(updateUsername("LOGGED OUT"))
+          }}
+        >
+          Logout
+        </button>
+
+        <button
+          onClick={() => {
+            dispatch(toggleTheme())
+          }}
+        >
+          {store.theme === "light" ? "GO DARK" : "GO LIGHT"}
+        </button>
 
         <div className="d-flex flex-row d-md-none ml-auto mr-4">
           <Link className="mr-3 icon-link" to="/search">

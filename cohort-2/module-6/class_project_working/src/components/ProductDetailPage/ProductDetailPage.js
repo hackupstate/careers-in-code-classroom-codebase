@@ -6,6 +6,7 @@ import { convertToPrice } from "../../utils/prices"
 import { RichText } from "../RichText/RichText"
 import { ProductQuantity } from "../ProductQuantity/ProductQuantity"
 import { ProductMediaViewer } from "./ProductMediaViewer"
+import { Toast, showToast } from "../Toast/Toast"
 
 export const ProductDetailPage = (props) => {
   const { id } = useParams()
@@ -50,7 +51,11 @@ export const ProductDetailPage = (props) => {
                 axios
                   .put("/api/cart-add", { id: item.id, quantity })
                   .then((response) => {
-                    // showToast("Added to cart")
+                    showToast(
+                      `Added ${quantity} vacation package${
+                        quantity > 1 ? "s" : ""
+                      } to cart`
+                    )
                   })
               }}
             >
@@ -66,6 +71,7 @@ export const ProductDetailPage = (props) => {
           </div>
         </div>
       </div>
+      <Toast />
     </div>
   )
 }

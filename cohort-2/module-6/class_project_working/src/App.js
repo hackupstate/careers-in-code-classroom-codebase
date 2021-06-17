@@ -1,9 +1,12 @@
 import { Layout } from "./components/Layout/Layout"
+import { Store } from "./store/store"
 
 function App() {
   return (
     <div className="App">
-      <Layout />
+      <Store>
+        <Layout />
+      </Store>
     </div>
   )
 }
