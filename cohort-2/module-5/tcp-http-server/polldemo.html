@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Module 5 test server</title>
+    <link rel="stylesheet" href="/styles.css"></link>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Poll demo</h1>
+
+      <p>The below is the latest message received from the server:</p>
+      <div id="message">Waiting for first message to arrive!</div>
+      <br />
+
+      <button onclick="reset()">Reset</button>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      function reset() {
+        axios.post('/reset').then(response => {
+          document.getElementById('message').innerHTML = "Reset Processed!"
+        });
+      }
+
+      // Initially populate 
+      axios.get('/poll').then(response => {
+        document.getElementById('message').innerHTML = JSON.stringify(response.data);
+      });
+
+      setInterval(() => {
+        axios.get('/poll').then(response => {
+          document.getElementById('message').innerHTML = JSON.stringify(response.data);
+        });
+      }, 2500);
+    </script>
+  </body>
+</html>
