@@ -717,6 +717,7 @@ wsServer.on('connection', function connection(ws) {
       if (parsed.type === "reset") {
         counter = 0;
       }
+      ws.send(JSON.stringify({now: new Date().toISOString(), counter}));
     } catch (err) {
       ws.send(JSON.stringify({detail: `Error parsing json: ${data}`}));
       return
