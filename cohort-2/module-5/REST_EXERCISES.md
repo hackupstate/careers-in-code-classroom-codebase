@@ -57,12 +57,12 @@ pertinent to the tasks below. Understanding documentation is a big part of what 
 have to do on a day to day basis and this should hopefully be some good practice.
 
 ### Exercise
-Determine a list of all people in star wars that have a homeworld of `tatooine` by making an api request to the star wars api.
+Determine a list of all people in star wars that have a name that contains the letter `a` by making an api request to the star wars api.
 
 1. First, find the endpoint to list all people in the api documentation. Start out by making
    this request. Hint: there is a "Resource" section in the sidebar, that's a pretty good place to start!
 2. Now, you're going to need to specify a "filter" to this request to limit all the people returned
-   to just those that have a homeworld of `tatooine`. Can you figure out how to do this by reading the
+   to just those that have a name that contains the letter `a`. Can you figure out how to do this by reading the
    documentation? Hint: when the documentation says "attributes", they mean query parameters.
 3. Make a request to this api endpoint, and note down the response body.
 

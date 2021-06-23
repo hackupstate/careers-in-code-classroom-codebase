@@ -38,7 +38,7 @@ Returns an object that represents the product data
 
   /* The product description
     - type: string; */
-  name: 'Some product description. Could be rich text.',
+  description: 'Some product description. Could be rich text.',
 
   /* The product price
     - type: number; */
@@ -124,7 +124,7 @@ Returns an object with an items array property that represents all the products 
 
   /* Sort products based on value. Accepted values: "best-selling", "price-ascending", "price-descending"
     - type: string; */
-  filterBy: "best-selling",
+  sortBy: "best-selling",
 }
 ```
 

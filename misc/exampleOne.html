@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example One</title>
+<script>
+function validateData()
+{
+	var result = true;
+	var errorMsg = "";
+	var year = document.getElementById("year").value;
+	var creditCardNbr = document.getElementById("creditCardNbr").value;
+	if (year.length != 4)
+		errorMsg = "Year must contain four digits.";
+	else
+		year = Number(year);
+	if (Number.isNaN(year))
+		errorMsg = "Year must contain four digits.";
+	if (errorMsg.length > 0)
+		errorMsg = errorMsg + "\n";
+	if (creditCardNbr.length != 16)
+		errorMsg = errorMsg + "Credit Card Number must contain sixteen digits.";
+	else
+		creditCardNbr = Number(creditCardNbr);
+	if (Number.isNaN(creditCardNbr))
+		errorMsg = errorMsg + "Credit Card Number must contain sixteen digits.";
+	if (errorMsg.length > 0)
+	{
+		result = false;
+		alert(errorMsg);
+	}
+	return result;
+}
+</script>
+</head>
+<body>
+<h1> Example One</h1>
+<form name="DataEntry" onsubmit="return validateData()" action="submitForm.html" method="post">
+<label for="year">Year:</label>
+<input type="text" id="year" name="year" value=""><br \><br \>
+<label for="creditCardNbr">Credit Card Number:</label>
+<input type="text" id="creditCardNbr" name="creditCardNbr" value=""><br \><br \>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>

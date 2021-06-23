@@ -1,0 +1,14 @@
+.ImageMedia {
+  &__Image {
+    width: 100%;
+    background-size: contain;
+  }
+}
+
+.ImageMedia--thumbnail {
+  .ImageMedia__Image {
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+  }
+}

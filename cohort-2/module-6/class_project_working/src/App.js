@@ -1,9 +1,12 @@
-import { HomePage } from "./components/HomePage/HomePage"
+import { Layout } from "./components/Layout/Layout"
+import { Store } from "./store/store"
 
 function App() {
   return (
     <div className="App">
-      <HomePage />
+      <Store>
+        <Layout />
+      </Store>
     </div>
   )
 }

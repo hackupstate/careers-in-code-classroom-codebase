@@ -1,0 +1,38 @@
+.Footer {
+  &__Content {
+    border-top: 1px solid lightgrey;
+  }
+
+  &__LinksHeading {
+    font-weight: bold;
+  }
+
+  &__Link {
+    color: rgba(0, 0, 0, 0.5);
+    &:hover {
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  &__MailingListHeading {
+    font-weight: bold;
+  }
+
+  &__Email {
+    width: 100%;
+    height: 40px;
+    border: 1px solid lightgrey;
+    padding-left: 20px;
+  }
+
+  &__EmailButton {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: lightgrey;
+    &:hover {
+      background-color: darkgrey;
+    }
+  }
+}
