@@ -5,6 +5,7 @@ const uuid = require('uuid');
 const session = require('express-session');
 const fs = require('fs');
 const fetch = require('node-fetch');
+const WebSocket = require('ws');
 
 const sessionMiddleware = session({
   secret: 'wxSA9TipQyLdKUNmPSaVpVnDDdh3pk/FadecsBcYVl',
@@ -505,6 +506,7 @@ function carsUpdate(req, res) {
   for (let i = 0; i < CARS.length; i++) {
     if (CARS[i].id === req.params.id) {
       CARS[i] = Object.assign({}, CARS[i], req.body);
+      console.log(CARS)
 
       res.status(200);
       res.send(CARS[i]);
@@ -663,6 +665,73 @@ app.put("/api/cart-remove", sessionMiddleware, injectCartIntoSessionMiddleware, 
 });
 
 
+// Bonus: polling / long polling
+let counter = 0;
+let changeCallbacks = [];
+setInterval(() => {
+  counter += 1;
+  const copy = changeCallbacks;
+  changeCallbacks = [];
+  copy.forEach(cb => cb(counter));
+}, 5000);
+
+app.get('/poll', (req, res) => {
+  const now = new Date().toISOString();
+  res.send({ now, counter });
+});
+
+app.get('/polldemo.html', (req, res) => res.status(200).sendFile(path.join(__dirname, 'polldemo.html')))
+
+app.get('/longpoll', (req, res) => {
+  changeCallbacks.push(() => {
+    const now = new Date().toISOString();
+    res.send({ now, counter });
+  });
+});
+
+app.get('/longpolldemo.html', (req, res) => res.status(200).sendFile(path.join(__dirname, 'longpolldemo.html')))
+
+app.post('/reset', (req, res) => {
+  counter = 0;
+  res.status(204).end();
+});
+
+
+// Bonus: websockets!
+const wsServer = new WebSocket.Server({ noServer: true });
+const change = () => {
+  const now = new Date().toISOString()
+  wsServer.clients.forEach(client => {
+    if (client.readyState === WebSocket.OPEN) {
+      client.send(JSON.stringify({now, counter}));
+    }
+  });
+  changeCallbacks.push(change);
+}
+changeCallbacks.push(change);
+
+wsServer.on('connection', function connection(ws) {
+  ws.on('message', function incoming(data) {
+    try {
+      const parsed = JSON.parse(data);
+      if (parsed.type === "reset") {
+        counter = 0;
+      }
+    } catch (err) {
+      ws.send(JSON.stringify({detail: `Error parsing json: ${data}`}));
+      return
+    }
+  });
+});
+
+app.get('/websocketdemo.html', (req, res) => res.status(200).sendFile(path.join(__dirname, 'websocketdemo.html')))
+
 const PORT = parseInt(process.env.PORT || 5000, 10);
-app.listen(PORT);
+const appServer = app.listen(PORT);
 console.log(`* Started HTTP server on port ${PORT}`);
+
+appServer.on('upgrade', (request, socket, head) => {
+  wsServer.handleUpgrade(request, socket, head, socket => {
+    wsServer.emit('connection', socket, request);
+  });
+});
