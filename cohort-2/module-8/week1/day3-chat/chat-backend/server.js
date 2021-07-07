@@ -11,9 +11,10 @@ db.connect();
 // db.query("SELECT NOW()", (err, res) => {
 // 	console.log(res);
 // });
+
 server.get(`/messages`, async (req, res) => {
 	const messagesDB = await db.query(
-		`SELECT id, content, timestamp, received FROM messages`
+		`SELECT id, content, timestamp, received FROM messages  ORDER BY id`
 	);
 	res.send({
 		messages: messagesDB.rows.map((message) => {
@@ -29,7 +30,7 @@ server.post(`/messages`, async (req, res) => {
 	VALUES (NOW(), false, '${req.body.text}')`);
 
 	const messagesDB = await db.query(
-		`SELECT id, content, timestamp, received FROM messages`
+		`SELECT id, content, timestamp, received FROM messages ORDER BY id`
 	);
 	res.send({
 		messages: messagesDB.rows.map((message) => {
@@ -44,7 +45,7 @@ server.put("/messages/:id", async (req, res) => {
 		`UPDATE messages SET content='${req.body.text}' WHERE id=${req.params.id}`
 	);
 	const messagesDB = await db.query(
-		`SELECT id, content, timestamp, received FROM messages`
+		`SELECT id, content, timestamp, received FROM messages  ORDER BY id`
 	);
 	res.send({
 		messages: messagesDB.rows.map((message) => {

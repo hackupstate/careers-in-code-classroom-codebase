@@ -4,19 +4,24 @@ export const MessageInput = ({ setMessages, messages }) => {
 	const [text, setText] = useState("");
 	const onSubmit = async (evt) => {
 		evt.preventDefault();
-		const res = await fetch(`http://localhost:3001/messages`, {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify({
-				text: text,
-				received: false,
-				timestamp: new Date(),
-			}),
-		});
-		const data = await res.json();
-		setMessages(data.messages);
+		try {
+			const res = await fetch(`http://localhost:3001/messages`, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					text: text,
+					received: false,
+					timestamp: new Date(),
+				}),
+			});
+			const data = await res.json();
+			setMessages(data.messages);
+		} catch (e) {
+			alert("Oh noes! Shit hit the fan. ");
+			console.error(e);
+		}
 		// .then((res) => {
 		// 	return res.json();
 		// })
