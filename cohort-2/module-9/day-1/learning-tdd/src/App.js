@@ -20,8 +20,9 @@ function App() {
                 <input name='username'/>
                 </label>
 
-                <label>Password</label>
+                <label>Password
                 <input name='password' onChange={(e) => setPassword(e.target.value)}/>
+                </label>
 
                 <button type='submit'>Login</button>
             </form>

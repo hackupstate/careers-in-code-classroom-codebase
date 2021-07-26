@@ -1,35 +1,31 @@
+// if the guess is higher than the secret code, return "too high!"
+// if the guess is lower than the secret code, return "too low!"
+// if the guess is equal to the secret code, return "you cracked the code!"
 export const checkGuess = (guess, secretCode) => {
-    if (guess > secretCode) {
-        return "too high!"
-    }
-    if (guess < secretCode) {
-        return "too low!"
-    }
-    return "you cracked the code!"
+    return "you cracked the code!";
 }
 
 
-// Part 1 (tests-later-development)
+// Part 1
 //
 // Write test cases that cover all the behavior of the checkGuess function
-console.log(checkGuess(100, 100) === 'you cracked the code!');
-//
-// write console.asserts here!
-//
+console.assert(checkGuess(100, 100) === "you cracked the code!");
 
 
 // Part 2
 //
-// Uncomment the following assertions, but don't change them!
-// Change checkGuess to make this assertion pass
+// Uncomment the following assertion, but don't change them!
+// Change the checkGuess function to make this assertion pass
 //
-// console.assert(checkGuess("secretCode", Math.random()) === true);
+// console.assert(checkGuess("secretCode", Math.random()) === "you cracked the code!");
 
 
 // Part 3 (bonus)
 //
 // Uncomment this assertion, but dont change it.
 // Can you figure out why checkGuess passes?
-// Can you change checkGuess to return false?
+// Can you change checkGuess to return "too low!" ?
 //
-// console.assert(checkGuess(checkGuess, 1000) === false);
+// Are there other edge cases where checkGuess will return "you cracked the code!" ?
+//
+// console.assert(checkGuess(checkGuess, 1000) === "you cracked the code!");
