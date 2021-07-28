@@ -1,0 +1,8 @@
+
+.inventory-items > div {
+  border: 1px solid gray;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 10px;
+}
