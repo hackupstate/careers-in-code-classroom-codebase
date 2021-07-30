@@ -4,17 +4,23 @@ import {isPasswordValid} from "./validator";
 
 function App() {
     const [password, setPassword] = useState();
-    const [message, setMessage] = useState("");
+    const [valid, setValid] = useState(null);
 
     const onSubmit = (e) => {
         e.preventDefault();
 
-        if (isPasswordValid(password)) {
-            setMessage("Password is valid!");
-        } else {
-            setMessage("Password is not valid!")
-        }
+        setValid(isPasswordValid(password))
     };
+
+    let message;
+    if (valid === null) {
+
+    }
+    else if (valid) {
+        message = <p data-cy="valid-password">Password is valid</p>
+    } else {
+        message = <p data-cy="invalid-password">Password is invalid</p>
+    }
 
     return (
         <div>
@@ -31,7 +37,7 @@ function App() {
                 <input id='password' onChange={(e) => setPassword(e.target.value)}/>
                 </label>
 
-                <button type='submit'>Login</button>
+                <button data-cy="login" type='submit'>Login</button>
             </form>
 
             { message }
