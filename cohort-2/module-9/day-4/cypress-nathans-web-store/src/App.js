@@ -50,7 +50,7 @@ function App() {
             <h1>Nathan's Web Store</h1>
 
             <div>
-                <button onClick={onCalculateTotal}>Calculate total</button>
+                <button data-cy="calculate-total" onClick={onCalculateTotal}>Calculate total</button>
                 {
                     total ? <p>Total is: {total}</p> : null
                 }
