@@ -11,7 +11,7 @@ The server's domain name is `careersincode.ml`. Again, please use the protocol `
 
 ### Exercise 1
 
-Part A: Using fetch, make a request to this endpoint to return a some text.
+Part A: Using fetch, make a request to this endpoint to return some text.
 ```
 Method: GET
 Path: /apples
