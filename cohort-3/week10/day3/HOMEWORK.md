@@ -54,7 +54,12 @@ let javascriptObject = {
 - By default, javascript smooshes together the whole JSON object onto one line. Can you make the JSON output string span multiple lines and be properly indented - In other words, look like the below when it's outputted? You may need to look this one up online!
 ```
 {
-  "counts": [150, 12, 4, 37],
+  "counts": [
+    150,
+    12,
+    4,
+    37
+  ],
   "start": "5:00",
   "end": "8:00"
 }
