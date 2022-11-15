@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+		<title>Weather</title>
+		<style>
+			#weatherIcon{
+				font-size: 48px;
+			}
+			#currentTemp{
+				font-size: 36px;
+				font-weight: bold;
+			}
+			.container{
+				border: 1px solid gray;
+				margin-top: 20px;
+				border-radius: 10px;
+				padding: 15px;
+			}
+			.forecastIcon{
+				font-size: 36px;
+			}
+			#forecastRow p {
+				margin-bottom: 0;
+			}
+			/* Properties that might be helpful during the assignment */
+			/* .col-2{
+				background-color: gray;
+				height: 300px;
+				font-size: 24px;
+			} */
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-2 text-center" id="weatherIcon">
+					☁️
+				</div> <!-- end of conditions col-->
+				<div class="col-2">
+					<div id="currentTemp">68</div>
+					<div>°F | °C</div>
+				</div> <!-- end of temp col-->
+				<div class="col-4">
+					Precipitation: 55%<br/>
+					Humidity: 40%<br/>
+					Wind: 10 mph
+				</div>
+				<div class="col-4 text-end">
+					Manlius, NY 13104<br/>
+					Thursday 7:33 pm<br/>
+					Cloudy
+				</div>
+			</div> <!-- end of row 1-->
+			<hr/>
+			<div class="row" id="forecastRow">
+				<div class="col text-center">
+					<p>Thur</p>
+					<p class="forecastIcon">☁️</p>
+					<p>68°</p>
+				</div>
+				<div class="col text-center">
+					<p>Fri</p>
+					<p class="forecastIcon">☀️</p>
+					<p>30°</p>
+				</div>
+				<div class="col text-center">
+					<p>Sat</p>
+					<p class="forecastIcon">🌧</p>
+					<p>80°</p>
+				</div>
+				<div class="col text-center">
+					<p>Sun</p>
+					<p class="forecastIcon">🦄</p>
+					<p>-13°</p>
+				</div>
+				<div class="col text-center">
+					<p>Mon</p>
+					<p class="forecastIcon">🌈</p>
+					<p>5°</p>
+				</div>
+			</div> <!-- end of row 2-->
+		</div> <!-- end of container-->
+	</body>
+</html>
