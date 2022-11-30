@@ -6,6 +6,7 @@ const session = require('express-session');
 const fs = require('fs');
 const fetch = require('node-fetch');
 const WebSocket = require('ws');
+const natural = require('natural');
 
 const sessionMiddleware = session({
   secret: 'wxSA9TipQyLdKUNmPSaVpVnDDdh3pk/FadecsBcYVl',
@@ -164,6 +165,30 @@ app.post('/text-processing/frequencies', (req, res) => {
   const freqs = frequencies(req.body);
   res.status(200);
   res.send(Object.entries(freqs).map(([key, value]) => `${key}: ${value}`).join('\n')+'\n');
+});
+app.post('/text-processing/sentiment', (req, res) => {
+  const sent = new natural.SentimentAnalyzer("English", natural.PorterStemmer, "afinn");
+  const result = sent.getSentiment(req.body.split(" "));
+  res.status(200);
+  res.send(`Sentiment: ${(result * 100).toFixed(2)}% positive\n`);
+});
+app.post('/text-processing/verbs', (req, res) => {
+  const language = "EN"
+  const defaultCategory = 'N';
+  const defaultCategoryCapitalized = 'NNP';
+
+  var lexicon = new natural.Lexicon(language, defaultCategory, defaultCategoryCapitalized);
+  var ruleSet = new natural.RuleSet('EN');
+  var tagger = new natural.BrillPOSTagger(lexicon, ruleSet);
+  var ruleSet = new natural.RuleSet('EN');
+  var tagger = new natural.BrillPOSTagger(lexicon, ruleSet);
+
+  var sentence = req.body.split(" ");
+  const result = tagger.tag(sentence);
+
+  res.status(200);
+  res.send(`All verbs: ${result.taggedWords.filter(w => w.tag.startsWith("VB")).map(w => w.token).join(", ") || "None found"}\n`);
+  //res.send(`All verbs: ${JSON.stringify(result)}\n`);
 });
 app.get('/lockbox', (req, res) => {
   if (req.headers['authorization'] === 'supersecret') {
