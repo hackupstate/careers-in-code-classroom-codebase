@@ -1,0 +1,31 @@
+#todaysWeatherIcon{
+	font-size: 75px;
+	text-align: center;
+}
+
+#todaysTemp{
+	font-size: 36px;
+	font-weight: 700;
+}
+
+.bold{
+	font-weight: 700;
+}
+
+#todaysDetails{
+	font-size: 12px;
+}
+
+.day{
+	font-size: 16px;
+}
+.smallIcon{
+	font-size: 36px;
+}
+
+#weatherContainer{
+	border: 1px solid gray;
+	border-radius: 5px;
+	padding: 15px;
+	margin-top: 30px;
+}

@@ -1,0 +1,28 @@
+.lastClicked {
+	background: pink;
+}
+
+#container {
+	border: 3px solid green;
+	width: 160px;
+	box-shadow: 3px 3px lightgreen;
+	/* display: inline; */
+}
+
+button {
+	width: 30px;
+	margin-left: 3px;
+	margin-right: 3px;
+	margin-bottom: 10px;
+	background: none;
+	padding: 5px;
+}
+
+#screen {
+	background-color: green;
+	color: white;
+	font-family: "Courier New", Courier, monospace;
+	margin-bottom: 15px;
+	padding: 10px;
+	text-align: right;
+}

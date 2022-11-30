@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather</title>
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<link href="style.css" rel="stylesheet" />
+		<style>
+			/* .col-2, .col-6, .col{
+			border: 2px solid blue;
+		} */
+		</style>
+	</head>
+	<body>
+		<div class="container" id="weatherContainer">
+			<div class="row">
+				<div class="col-2" id="todaysWeatherIcon">
+					<!-- Wow, this emoji is fire!!  -->
+					🌧
+				</div>
+				<div class="col-2">
+					<span id="todaysTemp">48</span>
+					<div><span class="bold">℉</span> | ℃</div>
+				</div>
+				<div class="col-2" id="todaysDetails">
+					Precipitation: 88%<br />
+					Humidity: 86%<br />
+					Wind: 10mph
+				</div>
+				<div class="col-6 text-end">
+					<div class="bold">
+						<select id="location">
+							<option value="Ocean City">
+								Ocean City, NJ 08226
+							</option>
+							<option value="Syracuse">Syracuse, NY 13202</option>
+							<option value="San Francisco">
+								San Francisco, CA 94109
+							</option>
+						</select>
+					</div>
+					<div>Thur 6:29 PM</div>
+					<div>Rainy</div>
+				</div>
+			</div>
+			<hr />
+			<div class="row">
+				<div class="col text-center">
+					<div class="day">Mon</div>
+					<div class="smallIcon">☀️</div>
+					<div>50℉</div>
+				</div>
+				<div class="col text-center">
+					<div class="day">Mon</div>
+					<div class="smallIcon">☀️</div>
+					<div>30℉</div>
+				</div>
+				<div class="col text-center">
+					<div class="day">Mon</div>
+					<div class="smallIcon">🌧</div>
+					<div>40℉</div>
+				</div>
+				<div class="col text-center">
+					<div class="day">Mon</div>
+					<div class="smallIcon">⛈</div>
+					<div>70℉</div>
+				</div>
+				<div class="col text-center">
+					<div class="day">Mon</div>
+					<div class="smallIcon">🌬</div>
+					<div>80℉</div>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

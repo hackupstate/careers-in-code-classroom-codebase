@@ -1,0 +1,24 @@
+body {
+	text-align: center;
+}
+
+.occupied {
+	color: red;
+}
+
+.selected {
+	color: blue;
+}
+
+.seat:nth-child(3),
+.seat:nth-child(7) {
+	margin-left: 20px;
+}
+
+#screen {
+	border: 1px solid black;
+	width: 275px;
+	display: inline-block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
