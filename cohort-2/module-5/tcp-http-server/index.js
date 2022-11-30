@@ -144,11 +144,11 @@ app.get('/', (req, res) => res.status(200).sendFile(path.join(__dirname, 'index.
 app.get('/styles.css', (req, res) => res.status(200).sendFile(path.join(__dirname, '/styles.css')))
 
 // Day 2, Day 3, Day 4
-app.get('/fruit', (req, res) => res.status(200).send('Apples, Oranges, Bananas'));
-app.get('/apples', (req, res) => res.status(200).send('Apples!'));
-app.get('/oranges', (req, res) => res.status(200).send('Oranges.'));
-app.post('/bananas', (req, res) => res.status(200).send('Bananas?'));
-app.post('/echo', (req, res) => res.status(200).send(req.body));
+app.get('/fruit', (req, res) => res.status(200).send('Apples, Oranges, Bananas\n'));
+app.get('/apples', (req, res) => res.status(200).send('Apples!\n'));
+app.get('/oranges', (req, res) => res.status(200).send('Oranges.\n'));
+app.post('/bananas', (req, res) => res.status(200).send('Bananas?\n'));
+app.post('/echo', (req, res) => res.status(200).send(req.body+'\n'));
 function frequencies(body) {
   const words = body.toString().split(' ');
   return words.reduce((frequencies, word) => {
@@ -195,9 +195,9 @@ app.post('/text-processing/verbs', (req, res) => {
 });
 app.get('/lockbox', (req, res) => {
   if (req.headers['authorization'] === 'supersecret') {
-    res.status(201).send('You have unlocked the box! Your instructor is impressed.');
+    res.status(201).send('You have unlocked the box! Your instructor is impressed.\n');
   } else {
-    res.status(401).send('You have not provides the right password to unlock the box. Try again!');
+    res.status(401).send('You have not provides the right password to unlock the box. Try again!\n');
   }
 });
 
@@ -209,29 +209,29 @@ app.post('/tokens', (req, res) => {
     key: token,
     permissions: ['read'],
   });
-  res.status(201).send(`Your token was created! It is ${token}.`);
+  res.status(201).send(`Your token was created! It is ${token}.\n`);
 });
 app.get('/protected-resource', (req, res) => {
   const parts = (req.headers['authorization'] || '').split(' ');
   if (parts.length < 2) {
-    return res.status(401).send('You did not specify a token, that is required for this endpoint.');
+    return res.status(401).send('You did not specify a token, that is required for this endpoint.\n');
   }
   if (parts[0].toLowerCase() !== 'bearer') {
-    return res.status(400).send('Please add an authorization type (bearer, basic, etc) before your authorization data.');
+    return res.status(400).send('Please add an authorization type (bearer, basic, etc) before your authorization data.\n');
   }
   const token = parts[1];
   if (!TOKENS.find(t => t.key === token)) {
-    return res.status(403).send(`Your token was not found in the server's registry.`);
+    return res.status(403).send(`Your token was not found in the server's registry.\n`);
   }
-  return res.status(200).send('You specified a valid token! Thank you.');
+  return res.status(200).send('You specified a valid token! Thank you.\n');
 });
 
 app.post('/image-upload', (req, res) => {
   if (!req.headers['content-type']) {
-    res.status(400).send('Please sent a content type!');
+    res.status(400).send('Please sent a content type!\n');
   }
   if (!['image/png', 'image/jpeg'].includes(req.headers['content-type'])) {
-    res.status(400).send('Image data unable to be processed - ensure you specify the correct content-type!');
+    res.status(400).send('Image data unable to be processed - ensure you specify the correct content-type!\n');
   }
   res.status(200).send('Image successfully received, thanks!');
 });
