@@ -27,6 +27,7 @@ const QUESTION_IDENTIFIERS = {
       car: 'volvo',
       'operating system': 'linux',
       flower: 'violet',
+      color: 'orange',
     };
 
     const answer = answers[a];
@@ -40,6 +41,8 @@ const QUESTION_IDENTIFIERS = {
     if (args[0] === 'cpus') {
       const numCpus = require('os').cpus().length;
       write(`ANS I have ${numCpus} cpu cores.`);
+    } else if (args[0] === 'friends') {
+      write(`ANS I don't have any friends :(`);
     } else {
       write('ERR cannot answer that particular question');
     }
