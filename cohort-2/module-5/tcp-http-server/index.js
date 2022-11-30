@@ -200,6 +200,11 @@ app.get('/lockbox', (req, res) => {
     res.status(401).send('You have not provides the right password to unlock the box. Try again!\n');
   }
 });
+app.get('/time', (req, res) => {
+  const timezone = req.query.timezone;
+  const formatted = new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'long', timeZone: timezone || 'America/New_York' }).format(new Date());
+  res.status(200).send(`The current date and time is ${formatted}\n`);
+});
 
 // Day 5: Headers
 const TOKENS = [];
