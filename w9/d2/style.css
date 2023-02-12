@@ -1,0 +1,24 @@
+body {
+	text-align: center;
+}
+
+.material-symbols-outlined:nth-child(3),
+.material-symbols-outlined:nth-child(7) {
+	margin-left: 20px;
+}
+
+#screen {
+	border: 1px solid black;
+	width: 275px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: inline-block;
+}
+
+.occupied {
+	color: red;
+}
+
+.selected {
+	color: blue;
+}

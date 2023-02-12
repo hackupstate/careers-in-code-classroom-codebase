@@ -1,0 +1,128 @@
+body {
+	background: black;
+	color: white;
+}
+
+nav {
+	padding: 5px;
+	padding: 5px;
+}
+
+#linksBar span {
+	margin-left: 5px;
+	margin-right: 5px;
+	font-size: 12px;
+}
+
+#linksBar span:hover {
+	color: gray;
+	cursor: pointer;
+}
+
+#icons span {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#headlineContent {
+	background-image: url("img/cover.jpg");
+	min-height: 550px;
+	background-size: cover;
+}
+
+#netflixN {
+	height: 25px;
+}
+
+#seriesRow {
+	color: darkgray;
+	font-weight: bold;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	margin-top: 150px;
+}
+
+#showName {
+	font-family: "Cabin", sans-serif;
+	font-size: 56px;
+	text-shadow: 2px 2px black;
+}
+
+#trendingStatus img {
+	width: 25px;
+}
+
+#trendingStatus span {
+	font-weight: bold;
+	padding-left: 10px;
+	text-shadow: 1px 1px black;
+}
+
+#headlineContent p {
+	margin-top: 10px;
+}
+
+#play {
+	background: white;
+	border-radius: 2px;
+	border: none;
+	padding: 5px 20px 5px 20px;
+	font-weight: 500;
+}
+
+#buttonRow .material-symbols-outlined {
+	font-size: 28px;
+}
+
+#moreInfo {
+	background: rgba(120, 120, 120, 0.8);
+	border-radius: 2px;
+	border: none;
+	padding: 5px 20px 5px 10px;
+	font-weight: 500;
+	color: white;
+}
+
+#moreInfo span {
+	margin-left: 10px;
+}
+
+#ratingCol {
+	margin-top: 250px;
+}
+
+#ratingCol .material-symbols-outlined {
+	border: 2px solid white;
+	border-radius: 100px;
+	padding: 5px;
+}
+
+#rating {
+	background: rgba(0, 0, 0, 0.6);
+	padding: 5px 20px 5px 20px;
+	border-left: 2px solid white;
+	margin-left: 10px;
+}
+
+#firstVideoRowLabel {
+	margin-top: 20px;
+}
+
+#abnormalScreenSize {
+	display: none;
+}
+
+@media only screen and (max-width: 650px), (min-width: 1400px) {
+	#abnormalScreenSize {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		flex-direction: column;
+		text-align: center;
+		padding: 20px;
+	}
+	.container-fluid {
+		display: none;
+	}
+}

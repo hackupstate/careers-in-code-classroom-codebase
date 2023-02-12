@@ -1,0 +1,27 @@
+header {
+	border-bottom: 1px solid #ccc;
+	margin-top: 15px;
+}
+
+#messages {
+	margin-top: 15px;
+	height: calc(100vh - 140px);
+}
+
+.messageText {
+	background: blue;
+	color: white;
+	padding: 7px;
+	border-radius: 30px;
+}
+
+.timestamp {
+	color: darkgray;
+	font-size: 10px;
+	margin-top: 5px;
+}
+
+.userMessageText {
+	background-color: lightgray;
+	color: black;
+}

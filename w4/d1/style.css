@@ -1,0 +1,54 @@
+body{
+	background: #01161e;
+}
+
+#intro{
+	height: 75vh;
+	color: white;
+}
+
+#intro h1{
+	font-size: 66px;
+	animation: fadein ease-in 1s;
+	margin-bottom: 20px;
+}
+
+#intro code{
+	margin-top: 20px;
+}
+
+#intro h3{
+	opacity: 0;
+	animation-delay: 1s;
+	animation-name: fadein;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+#about, #contact {
+	background-color: #124559;
+	color: white;
+	padding: 30px;
+}
+
+#about h1{
+	margin-bottom: 0;
+}
+
+#about h5{
+	font-size: 16px;
+	font-weight: normal;
+}
+
+#contact {
+	background: #598392;
+}
+
+@keyframes fadein{
+	from {
+		opacity: 0;
+	} 
+	to {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,42 @@
+header {
+	border-bottom: 1px solid #ccc;
+	margin-top: 15px;
+}
+
+#messages {
+	margin-top: 15px;
+	height: calc(100vh - 140px);
+}
+
+.messageText {
+	background: blue;
+	color: white;
+	padding: 7px;
+	border-radius: 30px;
+	margin-top: 100px;
+}
+
+.messageRow {
+	margin-top: 10px;
+}
+
+.timestamp,
+.actions {
+	color: darkgray;
+	font-size: 10px;
+	margin-top: 5px;
+}
+
+.actions {
+	margin-top: 0;
+}
+
+.actions span:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.userMessageText {
+	background-color: lightgray;
+	color: black;
+}

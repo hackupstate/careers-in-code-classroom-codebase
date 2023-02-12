@@ -1,0 +1,23 @@
+#navbar{
+	background: navy;
+	color: white;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#linksBar{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid lightgray;
+}
+
+#linksBar span{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#activeLink{
+	border-bottom: 5px solid orange;
+	padding-bottom: 8px;
+	font-weight: bold;
+}

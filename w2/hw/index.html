@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+	<style>
+		.col-3, .col-9, .col-8, .col-4, .col-12, #row5{
+			background-color: gray;
+		}
+		.container{
+			margin-top: 10px;
+			font-size: 36px;
+		}
+		.col-3, .col-8{
+			border-right: 5px solid white;
+		}
+		.col-9{
+			border-left: 5px solid white;
+		}
+		#row2, #row3, #row4, #row5{
+			margin-top: 10px;
+		}
+		.col-8{
+			height: 200px;
+		}
+		.col-2{
+			background-color: red;
+			text-align: center;
+			border-left: 5px solid gray;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-3">
+				Logo
+			</div>
+			<div class="col-9 text-end">
+				Menu
+			</div>
+		</div> <!-- end of row1-->
+		<div class="row" id="row2">
+			<div class="col-8">
+				Main
+			</div>
+			<div class="col-4 text-end">
+				Aside
+			</div>
+		</div> <!-- end of row2-->
+		<div class="row" id="row3">
+			<div class="col-12 text-center">
+				Sponsors
+			</div>
+		</div> <!-- end of sponsors-->
+		<div class="row" id="row4">
+			<div class="col-2">
+				1
+			</div>
+			<div class="col-2">
+				2
+			</div>
+			<div class="col-2">
+				3
+			</div>
+			<div class="col-2">
+				4
+			</div>
+			<div class="col-2">
+				5
+			</div>
+			<div class="col-2">
+				6
+			</div>
+		</div>
+		<div class="row" id="row5">
+			Footer
+		</div> <!-- end of footer-->
+	</div> <!-- end of container-->
+	
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>Grid Page</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+		<style>
+			.red {
+				border: 2px solid red;
+			}
+			.blue {
+				border: 2px solid blue;
+				margin-top: 25px;
+				padding: 25px;
+				height: 100px;
+				width: 300px;
+			}
+			#boldAnd{
+				font-weight: bold;
+				color: red;
+			}
+			.bgBlue{
+				background: blue;
+			}
+			.bgRed{
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- The box below is red-->
+		<!-- <div class="red">Hello World</div>
+		<div class="blue">More Content <span class="red" id="boldAnd">and</span> a sentence.</div>
+		<div class="red">Another red box</div> -->
+		<div class="container">
+			<div class="row">
+				<div class="col-4 red">
+					Col 1
+				</div> <!-- End of Col 1 Div -->
+				<div class="col-8 red">
+					Col 2
+				</div> <!-- End of Col 2 Div -->
+			</div> <!-- End of first row Div -->
+			<div class="row">
+				<div class="col-3 bgBlue">
+					First col
+				</div> <!-- End of Row 2 Col 1 Div -->
+				<div class="col-6 bgRed">
+					Second col
+				</div>
+				<div class="col-3 bgBlue">
+					Third col
+				</div>
+			</div><!-- End of second row Div -->
+		</div> <!-- end of container -->
+	</body>
+</html>

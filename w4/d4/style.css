@@ -1,0 +1,34 @@
+:root {
+	--darkPurple: #75157c;
+	--lightPurple: #cac3e0;
+}
+
+body {
+	background-color: var(--lightPurple);
+}
+
+section {
+	padding: 20px;
+	background: white;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+
+section:nth-child(1) {
+	border-top: 7px solid var(--darkPurple);
+	margin-top: 10px;
+}
+
+section:nth-child(2) input {
+	width: 50%;
+}
+
+hr {
+	padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+	section:nth-child(2) input {
+		width: 100%;
+	}
+}

@@ -1,0 +1,31 @@
+body {
+	background: black;
+	color: white;
+}
+
+nav {
+	padding: 5px;
+	padding: 5px;
+}
+
+#linksBar span {
+	margin-left: 5px;
+	margin-right: 5px;
+	font-size: 12px;
+}
+
+#linksBar span:hover {
+	color: gray;
+	cursor: pointer;
+}
+
+#icons span {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#headlineContent {
+	background-image: url("img/cover.jpg");
+	min-height: 500px;
+	background-size: cover;
+}
